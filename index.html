@@ -1,1397 +1,887 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta name="google-site-verification" content="zx76jZJ5vLEImdzmHRfa_rmRl5tLM1PCUIpzawwVxO0">
-
       <meta property="og:image" content="/wol/static/ve8b5f0a//common/css/default_theme/images/logo_header.png">
       <meta property="og:description" content="Build, explore and research to increase your power. Deploy your armies, thieves and powerful magic to combat your opponents and bring them to their knees. Work with your team mates to maximize our kingdom&#39;s glory.">
       <meta property="og:title" content="The World&#39;s longest-running MMORPG game.">
       <meta property="og:url" content="https://utopia-game.com">
       <meta property="og:site_name" content="Utopia Game">
       <meta property="fb:app_id" content="398634356870956">
-
       <title>
-          Utopia
-          -
-          Buildings
+         Utopia
+         -
+         Buildings
       </title>
       <link rel="shortcut icon" href="https://utopia-game.com/wol/static/ve8b5f0a/common/images/fav_icon.png">
-      
-          <!-- STYLE SHEETS -->
-          <link rel="stylesheet" type="text/css" href="/assets/reset.css">
-          <link rel="stylesheet" type="text/css" href="/assets/introjs.css">
-          <link rel="stylesheet" type="text/css" href="/assets/jquery.jgrowl.css">
-          <link rel="stylesheet" type="text/css" href="/assets/layout.css">
-          <link rel="stylesheet" type="text/css" href="/assets/uniform.default.css">
-          <link rel="Stylesheet" type="text/css" href="/assets/jquery-ui-1.8.21.custom.css">
-          <link rel="stylesheet" type="text/css" href="/assets/jquery.wysiwyg.css">
-          <style>
-            .customDefault { 
-              color: black;
-            }
-            .customDefault .introjs-skipbutton {
-              border-radius: 0;
-              color: red;
-            }
-          </style>
-          
-          
-      
-
-          <link rel="stylesheet" type="text/css" href="/assets/theme.css">
-      
-
-      
-
-      
-          <!-- SCRIPTS -->
-          <script type="text/javascript" async="" src="/assets/js"></script><script src="/assets/all.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="/assets/all(1).js"></script><script async="" src="/assets/analytics.js"></script><script async="" type="text/javascript" src="https://quantcast.mgr.consensu.org/choice/6Fv0cGNfc_bw8/utopia-game.com/choice.js"></script><script type="text/javascript" src="/assets/jquery-1.8.1.min.js"></script>
-          <script type="text/javascript" src="/assets/jquery-ui-1.8.21.custom.min.js"></script>
-          <script type="text/javascript" src="/assets/jquery-plugins.js"></script>
-          <script type="text/javascript" src="/assets/utils.js"></script>
-          <script type="text/javascript" src="/assets/django_jquery_ajax.js"></script>
-          <script type="text/javascript" src="/assets/account_options.js"></script>
-          <script type="text/javascript" src="/assets/jquery.uniform.min.js"></script>
-          <script type="text/javascript" src="/assets/feedback.js"></script>
-          <script type="text/javascript" src="/assets/jquery.tools.min.js"></script>
-          <script type="text/javascript" src="/assets/intro.js"></script>
-          <script type="text/javascript" src="/assets/cc.min.js"></script>
-          <script type="text/javascript" src="/assets/swfobject-2.2.min.js"></script>
-          <script type="text/javascript" src="/assets/jquery.wysiwyg.js"></script>
-          <script type="text/javascript" src="/assets/jquery.jgrowl.min.js"></script>
-      
-
-      
+      <!-- STYLE SHEETS -->
+      <link rel="stylesheet" type="text/css" href="/assets/reset.css">
+      <link rel="stylesheet" type="text/css" href="/assets/introjs.css">
+      <link rel="stylesheet" type="text/css" href="/assets/jquery.jgrowl.css">
+      <link rel="stylesheet" type="text/css" href="/assets/layout.css">
+      <link rel="stylesheet" type="text/css" href="/assets/uniform.default.css">
+      <link rel="Stylesheet" type="text/css" href="/assets/jquery-ui-1.8.21.custom.css">
+      <link rel="stylesheet" type="text/css" href="/assets/jquery.wysiwyg.css">
+      <style>
+         .customDefault { 
+         color: black;
+         }
+         .customDefault .introjs-skipbutton {
+         border-radius: 0;
+         color: red;
+         }
+      </style>
+      <link rel="stylesheet" type="text/css" href="/assets/theme.css">
+      <!-- kN's Updated Build Script -->
+      <script type="module" src="/building.js"></script>
+      <!-- SCRIPTS -->
+      <script type="text/javascript" async="" src="/assets/js"></script>
+      <script src="/assets/all.js" async="" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="/assets/jquery-1.8.1.min.js"></script>
+      <script type="text/javascript" src="/assets/jquery-ui-1.8.21.custom.min.js"></script>
+      <script type="text/javascript" src="/assets/jquery-plugins.js"></script>
+      <script type="text/javascript" src="/assets/utils.js"></script>
+      <script type="text/javascript" src="/assets/django_jquery_ajax.js"></script>
+      <script type="text/javascript" src="/assets/account_options.js"></script>
+      <script type="text/javascript" src="/assets/jquery.uniform.min.js"></script>
+      <script type="text/javascript" src="/assets/feedback.js"></script>
+      <script type="text/javascript" src="/assets/jquery.tools.min.js"></script>
+      <script type="text/javascript" src="/assets/intro.js"></script>
+      <script type="text/javascript" src="/assets/cc.min.js"></script>
+      <script type="text/javascript" src="/assets/swfobject-2.2.min.js"></script>
+      <script type="text/javascript" src="/assets/jquery.wysiwyg.js"></script>
+      <script type="text/javascript" src="/assets/jquery.jgrowl.min.js"></script>
       <script type="text/javascript">
-          function setupJWYSIWYG() {
-              // Style any formatted comments on the page.
-              $('textarea.formatted-text').wysiwyg({
-                  'controls': {
-                      'justifyLeft': {'visible': false},
-                      'justifyCenter': {'visible': false},
-                      'justifyRight': {'visible': false},
-                      'justifyFull': {'visible': false},
-                      'indent': {'visible': false},
-                      'outdent': {'visible': false},
-                      'undo': {'visible': false},
-                      'redo': {'visible': false},
-                      'insertHorizontalRule': {'visible': false},
-                      'insertImage': {'visible': false},
-                      'h1': {'visible': true},
-                      'h2': {'visible': false},
-                      'h3': {'visible': false},
-                      'paragraph': {'visible': false},
-                      'increaseFontSize': {'visible': false},
-                      'decreaseFontSize': {'visible': false},
-                      'html': {'visible': false},
-                      'insertTable': {'visible': false},
-                      'createLink': {'visible': false},
-                      'code': {'visible': false},
-                      'removeFormat': {'visible': false},
-                      'strikeThrough': {'visible': false},
-                      'subscript': {'visible': false},
-                      'superscript': {'visible': false}
-                  },
-                  'css': '/wol/static/ve8b5f0a/common/css/classic_theme/theme.css',
-                  'initialContent': '',
-                  'iFrameClass': 'formatted-comment',
-                  'autoSave': true
-              });
-          }
-
-          $(document).ready(function(eventObject) {
-              // Setup any editable text areas.
-              
-                  setupJWYSIWYG();
-              
-
-              // Setup triggers that open overlays/lightboxes
-              var overlay_params = {
-                  mask: {
-                      color: '#000000',
-                      loadSpeed: 200,
-                      opacity: 0.5
-                  }
-              };
-              $(".overlay-trigger[rel]").overlay(overlay_params);
-              // Setup uniform form styling.
-              $("select, input:checkbox, input:radio, input:file").uniform();
-
-              // Catch clicks on shop login links
-              $(".shop-login-link").click(function() {
-                  $("#id-shop-login-form").submit();
-              });
-
-              
-          });
+         function setupJWYSIWYG() {
+             // Style any formatted comments on the page.
+             $('textarea.formatted-text').wysiwyg({
+                 'controls': {
+                     'justifyLeft': {'visible': false},
+                     'justifyCenter': {'visible': false},
+                     'justifyRight': {'visible': false},
+                     'justifyFull': {'visible': false},
+                     'indent': {'visible': false},
+                     'outdent': {'visible': false},
+                     'undo': {'visible': false},
+                     'redo': {'visible': false},
+                     'insertHorizontalRule': {'visible': false},
+                     'insertImage': {'visible': false},
+                     'h1': {'visible': true},
+                     'h2': {'visible': false},
+                     'h3': {'visible': false},
+                     'paragraph': {'visible': false},
+                     'increaseFontSize': {'visible': false},
+                     'decreaseFontSize': {'visible': false},
+                     'html': {'visible': false},
+                     'insertTable': {'visible': false},
+                     'createLink': {'visible': false},
+                     'code': {'visible': false},
+                     'removeFormat': {'visible': false},
+                     'strikeThrough': {'visible': false},
+                     'subscript': {'visible': false},
+                     'superscript': {'visible': false}
+                 },
+                 'css': '/wol/static/ve8b5f0a/common/css/classic_theme/theme.css',
+                 'initialContent': '',
+                 'iFrameClass': 'formatted-comment',
+                 'autoSave': true
+             });
+         }
+         
+         $(document).ready(function(eventObject) {
+             // Setup any editable text areas.
+             
+                 setupJWYSIWYG();
+             
+         
+             // Setup triggers that open overlays/lightboxes
+             var overlay_params = {
+                 mask: {
+                     color: '#000000',
+                     loadSpeed: 200,
+                     opacity: 0.5
+                 }
+             };
+             $(".overlay-trigger[rel]").overlay(overlay_params);
+             // Setup uniform form styling.
+             $("select, input:checkbox, input:radio, input:file").uniform();
+         
+             // Catch clicks on shop login links
+             $(".shop-login-link").click(function() {
+                 $("#id-shop-login-form").submit();
+             });
+         
+             
+         });
       </script>
       <script type="text/javascript">
-          function munkbot(){
-              //load munkbot domain into a cookie
-              var munkbot_domain = prompt("Please enter the xxxx.umunk.net, only the subdomain, e.g. mykd if url is mykd.umunk.net", "");
-
-              if (munkbot_domain) {
-                  localStorage.setItem("munkbot", munkbot_domain);
-                  localStorage.setItem("munkbot_auto", "0");
-              } else {
-                  localStorage.setItem("munkbot", "");
-                  localStorage.setItem("munkbot_auto", "0");
-                  window.location.reload(false); 
-              }
-          }
-
-          function disable_munkbot(){
-              localStorage.setItem("munkbot", "");
-              localStorage.setItem("munkbot_auto", "0");
-              window.location.reload(false); 
-          }
-
-          function auto_munkbot(value){
-              localStorage.setItem("munkbot_auto", value);
-              window.location.reload(false); 
-          }
-            
-          var munkbot_domain = true;
-          var munkbot_domain_auto = true;
-          $(document).ready(function(eventObject) {
-              
-              if (munkbot_domain) {
-                  $("#game-navigation").append('<div class="navigation" id="munkbot_options"></div>');
-                  $("#munkbot_options").append('<div><a href="#" onclick=load_munkbot();>Munkbot</a></div>');
-
-                  if (munkbot_domain_auto==1)
-                  {
-                      setTimeout(load_munkbot, 1000);
-                      $("#munkbot_options").append('<div><a href="#" onclick=auto_munkbot("0");> Auto: On</a></div>');
-                  } else {
-                      $("#munkbot_options").append('<div><a href="#" onclick=auto_munkbot("1");> Auto: Off</a></div>');
-                  }
-                  $("#munkbot_options").append('<div><a href="#" onclick=disable_munkbot();>Disable</a></div>')
-              }
-              
-          });
-
-          function load_munkbot() {
-
-            var script2 = document.createElement("script");
-            var d = new Date();
-            var curr_hour = d.getHours();
-            var curr_min = d.getMinutes();
-            var curr_date = d.getDate();
-            var curr_month = d.getMonth();
-            var curr_year = d.getFullYear();
-
-            var n = curr_year+ "" + curr_month+ "" + curr_date+ "" + curr_hour + "" + curr_min; 
-            
-            script2.setAttribute("src", "//intel.utopia-game.com/stable.js?n="+n);
-            document.body.appendChild(script2);
-
-          }
+         function munkbot(){
+             //load munkbot domain into a cookie
+             var munkbot_domain = prompt("Please enter the xxxx.umunk.net, only the subdomain, e.g. mykd if url is mykd.umunk.net", "");
+         
+             if (munkbot_domain) {
+                 localStorage.setItem("munkbot", munkbot_domain);
+                 localStorage.setItem("munkbot_auto", "0");
+             } else {
+                 localStorage.setItem("munkbot", "");
+                 localStorage.setItem("munkbot_auto", "0");
+                 window.location.reload(false); 
+             }
+         }
+         
+         function disable_munkbot(){
+             localStorage.setItem("munkbot", "");
+             localStorage.setItem("munkbot_auto", "0");
+             window.location.reload(false); 
+         }
+         
+         function auto_munkbot(value){
+             localStorage.setItem("munkbot_auto", value);
+             window.location.reload(false); 
+         }
+           
+         var munkbot_domain = true;
+         var munkbot_domain_auto = true;
+         $(document).ready(function(eventObject) {
+             
+             if (munkbot_domain) {
+                 $("#game-navigation").append('<div class="navigation" id="munkbot_options"></div>');
+                 $("#munkbot_options").append('<div><a href="#" onclick=load_munkbot();>Munkbot</a></div>');
+         
+                 if (munkbot_domain_auto==1)
+                 {
+                     setTimeout(load_munkbot, 1000);
+                     $("#munkbot_options").append('<div><a href="#" onclick=auto_munkbot("0");> Auto: On</a></div>');
+                 } else {
+                     $("#munkbot_options").append('<div><a href="#" onclick=auto_munkbot("1");> Auto: Off</a></div>');
+                 }
+                 $("#munkbot_options").append('<div><a href="#" onclick=disable_munkbot();>Disable</a></div>')
+             }
+             
+         });
+         
+         function load_munkbot() {
+         
+           var script2 = document.createElement("script");
+           var d = new Date();
+           var curr_hour = d.getHours();
+           var curr_min = d.getMinutes();
+           var curr_date = d.getDate();
+           var curr_month = d.getMonth();
+           var curr_year = d.getFullYear();
+         
+           var n = curr_year+ "" + curr_month+ "" + curr_date+ "" + curr_hour + "" + curr_min; 
+           
+           script2.setAttribute("src", "//intel.utopia-game.com/stable.js?n="+n);
+           document.body.appendChild(script2);
+         
+         }
       </script>
-
       <script type="text/javascript">
-          function customintel(){
-              var custom_kdsite = prompt("Enter where to send intel", "");
-              var custom_kdsite_key = prompt("Provide key (if required)", "");
-
-              if (custom_kdsite) {
-                  localStorage.setItem("custom_kdsite", custom_kdsite);
-                  localStorage.setItem("custom_kdsite_key", custom_kdsite_key);
-              } else {
-                  localStorage.setItem("custom_kdsite", "");
-                  window.location.reload(false); 
-              }
-          }
-
-          function disable_custom_kdsite(){
-              localStorage.setItem("custom_kdsite", "");
-              localStorage.setItem("custom_kdsite_key", "");
-              window.location.reload(false); 
-          }
-
-          function getBodyText(win) {
-              var doc = win.document,
-                  body = doc.body,
-                  selection, range, bodyText;
-              if (body.createTextRange) {
-                  return body.createTextRange().text;
-              } else if (win.getSelection) {
-                  selection = win.getSelection();
-                  selection.removeAllRanges();
-                  range = doc.createRange();
-                  referenceNode = document.getElementsByClassName("game-content")[0];
-                  range.selectNodeContents(referenceNode); //body
-                  selection.addRange(range);
-                  bodyText = selection.toString();
-                  selection.removeAllRanges();
-                  return bodyText;
-              }
-          }
-            
-          var custom_intel_storage_url = localStorage.getItem("custom_kdsite");
-          var custom_intel_storage_url_key = localStorage.getItem("custom_kdsite_key");
-          $(document).ready(function(eventObject) {
-              
-              if (custom_intel_storage_url) {
-                  $("#game-navigation").append('<div class="navigation" id="custom_intel_options"></div>');
-                  $("#custom_intel_options").append('<div>IntelSite: ON</div>');
-                  $("#custom_intel_options").append('<div><a href="#" onclick=disable_custom_kdsite();>Disable</a></div>');
-
-
-                  game_content_html = $('.game-content').html();
-                  game_content_simple = getBodyText(window);
-
-                  $.ajax({
-                      type: "POST",
-                      url: custom_intel_storage_url,
-                      data: "url=" + escape(document.URL) + "&data_html=" + escape(game_content_html) + "&data_simple=" + escape(game_content_simple) + "&key=" + escape(custom_intel_storage_url_key) + "&prov=" + escape("Electric Jellyfish"),
-                      error: function(jqXHR, textStatus, errorThrown,data) { 
-                          //$('.tablesorter').html('Failed - empty result?');
-                            console.log('Sending intel to '+custom_intel_storage_url+' failed.\n Error:'+errorThrown);
-                      }
-                  }).done(function (html) {
-                      try {
-                          var returnedData = JSON.parse(html);
-                          if (returnedData['success'] != true) {
-                              console.log('Something is wrong with your parser');
-                          } else {
-                              console.log('Sent page with success!');
-                          }
-                      } catch (e) {
-                            console.log('Something is wrong with your endpoint.');
-                      }
-                  });
-
-              }
-              
-          });
+         function customintel(){
+             var custom_kdsite = prompt("Enter where to send intel", "");
+             var custom_kdsite_key = prompt("Provide key (if required)", "");
+         
+             if (custom_kdsite) {
+                 localStorage.setItem("custom_kdsite", custom_kdsite);
+                 localStorage.setItem("custom_kdsite_key", custom_kdsite_key);
+             } else {
+                 localStorage.setItem("custom_kdsite", "");
+                 window.location.reload(false); 
+             }
+         }
+         
+         function disable_custom_kdsite(){
+             localStorage.setItem("custom_kdsite", "");
+             localStorage.setItem("custom_kdsite_key", "");
+             window.location.reload(false); 
+         }
+         
+         function getBodyText(win) {
+             var doc = win.document,
+                 body = doc.body,
+                 selection, range, bodyText;
+             if (body.createTextRange) {
+                 return body.createTextRange().text;
+             } else if (win.getSelection) {
+                 selection = win.getSelection();
+                 selection.removeAllRanges();
+                 range = doc.createRange();
+                 referenceNode = document.getElementsByClassName("game-content")[0];
+                 range.selectNodeContents(referenceNode); //body
+                 selection.addRange(range);
+                 bodyText = selection.toString();
+                 selection.removeAllRanges();
+                 return bodyText;
+             }
+         }
+           
+         var custom_intel_storage_url = localStorage.getItem("custom_kdsite");
+         var custom_intel_storage_url_key = localStorage.getItem("custom_kdsite_key");
+         $(document).ready(function(eventObject) {
+             
+             if (custom_intel_storage_url) {
+                 $("#game-navigation").append('<div class="navigation" id="custom_intel_options"></div>');
+                 $("#custom_intel_options").append('<div>IntelSite: ON</div>');
+                 $("#custom_intel_options").append('<div><a href="#" onclick=disable_custom_kdsite();>Disable</a></div>');
+         
+         
+                 game_content_html = $('.game-content').html();
+                 game_content_simple = getBodyText(window);
+         
+                 $.ajax({
+                     type: "POST",
+                     url: custom_intel_storage_url,
+                     data: "url=" + escape(document.URL) + "&data_html=" + escape(game_content_html) + "&data_simple=" + escape(game_content_simple) + "&key=" + escape(custom_intel_storage_url_key) + "&prov=" + escape("Electric Jellyfish"),
+                     error: function(jqXHR, textStatus, errorThrown,data) { 
+                         //$('.tablesorter').html('Failed - empty result?');
+                           console.log('Sending intel to '+custom_intel_storage_url+' failed.\n Error:'+errorThrown);
+                     }
+                 }).done(function (html) {
+                     try {
+                         var returnedData = JSON.parse(html);
+                         if (returnedData['success'] != true) {
+                             console.log('Something is wrong with your parser');
+                         } else {
+                             console.log('Sent page with success!');
+                         }
+                     } catch (e) {
+                           console.log('Something is wrong with your endpoint.');
+                     }
+                 });
+         
+             }
+             
+         });
       </script>
-
-      <!-- GDPR Consentment Banner DEPRECATED 8/2020 -->
-<!--         <script type="text/javascript" async=true >
-          var elem = document.createElement('script');
-          elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
-          elem.async = true;
-          elem.type = "text/javascript";
-          var scpt = document.getElementsByTagName('script')[0];
-          scpt.parentNode.insertBefore(elem, scpt);
-          (function() {
-          var gdprAppliesGlobally = false;
-          function addFrame() {
-              if (!window.frames['__cmpLocator']) {
-              if (document.body) {
-                  var body = document.body,
-                      iframe = document.createElement('iframe');
-                  iframe.style = 'display:none';
-                  iframe.name = '__cmpLocator';
-                  body.appendChild(iframe);
-              } else {
-                  setTimeout(addFrame, 5);
-              }
-              }
-          }
-          addFrame();
-          function cmpMsgHandler(event) {
-              var msgIsString = typeof event.data === "string";
-              var json;
-              if(msgIsString) {
-              json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
-              } else {
-              json = event.data;
-              }
-              if (json.__cmpCall) {
-              var i = json.__cmpCall;
-              window.__cmp(i.command, i.parameter, function(retValue, success) {
-                  var returnMsg = {"__cmpReturn": {
-                  "returnValue": retValue,
-                  "success": success,
-                  "callId": i.callId
-                  }};
-                  event.source.postMessage(msgIsString ?
-                  JSON.stringify(returnMsg) : returnMsg, '*');
-              });
-              }
-          }
-          window.__cmp = function (c) {
-              var b = arguments;
-              if (!b.length) {
-              return __cmp.a;
-              }
-              else if (b[0] === 'ping') {
-              b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
-                  "cmpLoaded": false}, true);
-              } else if (c == '__cmp')
-              return false;
-              else {
-              if (typeof __cmp.a === 'undefined') {
-                  __cmp.a = [];
-              }
-              __cmp.a.push([].slice.apply(b));
-              }
-          }
-          window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
-          window.__cmp.msgHandler = cmpMsgHandler;
-          if (window.addEventListener) {
-              window.addEventListener('message', cmpMsgHandler, false);
-          }
-          else {
-              window.attachEvent('onmessage', cmpMsgHandler);
-          }
-          })();
-          window.__cmp('init', {
-                  'Language': 'en',
-              'Initial Screen Body Text Option': 1,
-              'Publisher Name': 'Moneytizer',
-              'Default Value for Toggles': 'on',
-              'UI Layout': 'banner',
-              'No Option': false,
-          });
+      <script type="text/javascript" src="/assets/jquery.selectbox-0.5.js"></script>
+      <script type="text/javascript" src="/assets/bookmark_options.js"></script>
+      <script type="text/javascript">
+         seen_tutorials = ['game_throne', 'game_aid', 'game_kingdom_details', 'game_council_state', 'game_spells_reflexive', 'game_science', 'game_build'];
+         tutorial_enabled = 'False';
+         current_page = 'game_throne';
+         seen_tutorial_url = '/shared//seen_tutorial';
       </script>
-          <style>
-              .qc-cmp-button,
-              .qc-cmp-button.qc-cmp-secondary-button:hover {
-                  background-color: #000000 !important;
-                  border-color: #000000 !important;
-              }
-              .qc-cmp-button:hover,
-              .qc-cmp-button.qc-cmp-secondary-button {
-                  background-color: transparent !important;
-                  border-color: #000000 !important;
-              }
-              .qc-cmp-alt-action,
-              .qc-cmp-link {
-                  color: #000000 !important;
-              }
-              .qc-cmp-button,
-              .qc-cmp-button.qc-cmp-secondary-button:hover {
-                  color: #ffffff !important;
-              }
-              .qc-cmp-button:hover,
-              .qc-cmp-button.qc-cmp-secondary-button {
-                  color: #000000 !important;
-              }
-              .qc-cmp-small-toggle,
-              .qc-cmp-toggle {
-                  background-color: #000000 !important;
-                  border-color: #000000 !important;
-              }
-              .qc-cmp-main-messaging,
-              .qc-cmp-messaging,
-              .qc-cmp-sub-title,
-              .qc-cmp-privacy-settings-title,
-              .qc-cmp-purpose-list,
-              .qc-cmp-tab,
-              .qc-cmp-title,
-              .qc-cmp-vendor-list,
-              .qc-cmp-vendor-list-title,
-              .qc-cmp-enabled-cell,
-              .qc-cmp-toggle-status,
-              .qc-cmp-table,
-              .qc-cmp-table-header {
-                  color: #000000 !important;
-              }
-              
-              .qc-cmp-ui {
-                  background-color: #ffffff !important;
-              }
-
-              .qc-cmp-table,
-              .qc-cmp-table-row {
-                    border: 1px solid !important;
-                    border-color: #000000 !important;
-              } 
-          #qcCmpButtons a {
-                  text-decoration: none !important;
-
-          }
-          
-          #qcCmpButtons button {
-              margin-top: 65px;
-          }
-          
-          
-        @media screen and (min-width: 851px) {
-          #qcCmpButtons a {
-                  position: absolute;
-                  bottom: 10%;
-                  left: 60px;
-          }
-        }
-        .qc-cmp-qc-link-container{
-          display:none;
-        }
-          </style> -->
-      <!-- End GDPR Consentment Banner DEPRECATED 8/2020 -->
-
-      <!-- START GDPR Consentment Banner UPDATED 8/2020 -->
-      <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
-      <script type="text/javascript" async="true">
-      (function() {
-          var host = window.location.hostname;
-          var element = document.createElement('script');
-          var firstScript = document.getElementsByTagName('script')[0];
-          var url = 'https://quantcast.mgr.consensu.org'
-              .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
-          var uspTries = 0;
-          var uspTriesLimit = 3;
-          element.async = true;
-          element.type = 'text/javascript';
-          element.src = url;
-
-          firstScript.parentNode.insertBefore(element, firstScript);
-
-          function makeStub() {
-              var TCF_LOCATOR_NAME = '__tcfapiLocator';
-              var queue = [];
-              var win = window;
-              var cmpFrame;
-
-              function addFrame() {
-                  var doc = win.document;
-                  var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-
-                  if (!otherCMP) {
-                      if (doc.body) {
-                          var iframe = doc.createElement('iframe');
-
-                          iframe.style.cssText = 'display:none';
-                          iframe.name = TCF_LOCATOR_NAME;
-                          doc.body.appendChild(iframe);
-                      } else {
-                          setTimeout(addFrame, 5);
-                      }
-                  }
-                  return !otherCMP;
-              }
-
-              function tcfAPIHandler() {
-                  var gdprApplies;
-                  var args = arguments;
-
-                  if (!args.length) {
-                      return queue;
-                  } else if (args[0] === 'setGdprApplies') {
-                      if (
-                          args.length > 3 &&
-                          args[2] === 2 &&
-                          typeof args[3] === 'boolean'
-                      ) {
-                          gdprApplies = args[3];
-                          if (typeof args[2] === 'function') {
-                              args[2]('set', true);
-                          }
-                      }
-                  } else if (args[0] === 'ping') {
-                      var retr = {
-                          gdprApplies: gdprApplies,
-                          cmpLoaded: false,
-                          cmpStatus: 'stub'
-                      };
-
-                      if (typeof args[2] === 'function') {
-                          args[2](retr);
-                      }
-                  } else {
-                      queue.push(args);
-                  }
-              }
-
-              function postMessageEventHandler(event) {
-                  var msgIsString = typeof event.data === 'string';
-                  var json = {};
-
-                  try {
-                      if (msgIsString) {
-                          json = JSON.parse(event.data);
-                      } else {
-                          json = event.data;
-                      }
-                  } catch (ignore) {}
-
-                  var payload = json.__tcfapiCall;
-
-                  if (payload) {
-                      window.__tcfapi(
-                          payload.command,
-                          payload.version,
-                          function(retValue, success) {
-                              var returnMsg = {
-                                  __tcfapiReturn: {
-                                      returnValue: retValue,
-                                      success: success,
-                                      callId: payload.callId
-                                  }
-                              };
-                              if (msgIsString) {
-                                  returnMsg = JSON.stringify(returnMsg);
-                              }
-                              event.source.postMessage(returnMsg, '*');
-                          },
-                          payload.parameter
-                      );
-                  }
-              }
-
-              while (win) {
-                  try {
-                      if (win.frames[TCF_LOCATOR_NAME]) {
-                          cmpFrame = win;
-                          break;
-                      }
-                  } catch (ignore) {}
-
-                  if (win === window.top) {
-                      break;
-                  }
-                  win = win.parent;
-              }
-              if (!cmpFrame) {
-                  addFrame();
-                  win.__tcfapi = tcfAPIHandler;
-                  win.addEventListener('message', postMessageEventHandler, false);
-              }
-          };
-
-          if (typeof module !== 'undefined') {
-              module.exports = makeStub;
-          } else {
-              makeStub();
-          }
-
-          var uspStubFunction = function() {
-              var arg = arguments;
-              if (typeof window.__uspapi !== uspStubFunction) {
-                  setTimeout(function() {
-                      if (typeof window.__uspapi !== 'undefined') {
-                          window.__uspapi.apply(window.__uspapi, arg);
-                      }
-                  }, 500);
-              }
-          };
-
-          var checkIfUspIsReady = function() {
-              uspTries++;
-              if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
-                  console.warn('USP is not accessible');
-              } else {
-                  clearInterval(uspInterval);
-              }
-          };
-
-          if (typeof window.__uspapi === 'undefined') {
-              window.__uspapi = uspStubFunction;
-              var uspInterval = setInterval(checkIfUspIsReady, 6000);
-          }
-      })();
-
+      <script type="text/javascript" src="/assets/tutorials.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+         
+                 $(".two-digit-input").each(function(i, obj) {
+                     $(obj).prop('type','number');
+                 });
+                 $(".three-digit-input").each(function(i, obj) {
+                     $(obj).prop('type','number');
+                 });
+                 $(".four-digit-input").each(function(i, obj) {
+                     $(obj).prop('type','number');
+                 });
+                 $(".five-digit-input").each(function(i, obj) {
+                     $(obj).prop('type','number');
+                 });
+                 $(".six-digit-input").each(function(i, obj) {
+                     $(obj).prop('type','number');
+                 });
+                           // some code..
+             }
+         
+         });
       </script>
-      <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
-
-
-
-
-      
-      <!-- UA -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-89346517-2', {
-      
-          
-              'clientId': '3AF5417E'
-          
-      
-  });
-  
-  
-      ga('send', 'pageview');
-  
-</script>
-      
-      
-  
-  
-      
-  <script type="text/javascript" src="/assets/jquery.selectbox-0.5.js"></script>
-  <script type="text/javascript" src="/assets/bookmark_options.js"></script>
-  
-  <script type="text/javascript">
-      seen_tutorials = ['game_throne', 'game_aid', 'game_kingdom_details', 'game_council_state', 'game_spells_reflexive', 'game_science', 'game_build'];
-      tutorial_enabled = 'False';
-      current_page = 'game_throne';
-      seen_tutorial_url = '/shared//seen_tutorial';
-  </script>
-
-  <script type="text/javascript" src="/assets/tutorials.js"></script>
-
-  <script type="text/javascript">
-      $(document).ready(function(){
-          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-              $(".two-digit-input").each(function(i, obj) {
-                  $(obj).prop('type','number');
-              });
-              $(".three-digit-input").each(function(i, obj) {
-                  $(obj).prop('type','number');
-              });
-              $(".four-digit-input").each(function(i, obj) {
-                  $(obj).prop('type','number');
-              });
-              $(".five-digit-input").each(function(i, obj) {
-                  $(obj).prop('type','number');
-              });
-              $(".six-digit-input").each(function(i, obj) {
-                  $(obj).prop('type','number');
-              });
-                        // some code..
-          }
-
-      });
-  </script>
-
-
-  
-
-  <script type="text/javascript">
-      AC_FL_RunContent = 0;
-      DetectFlashVer = 0;
-  </script>
-  <script src="/assets/AC_RunActiveContent.js" type="text/javascript"></script>
-  <script src="/assets/embed.js" type="text/javascript"></script>
-
-  <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
-.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
-
-      <!--Start of Tawk.to Script-->
-<!--       
--->
-      <!--End of Tawk.to Script-->
-  <body>
-
-      
+      <script type="text/javascript">
+         AC_FL_RunContent = 0;
+         DetectFlashVer = 0;
+      </script>
+      <script src="/assets/AC_RunActiveContent.js" type="text/javascript"></script>
+      <script src="/assets/embed.js" type="text/javascript"></script>
+      <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+         .fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+         .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+         .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+         .fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}
+      </style>
+   </head>
+   <!--Start of Tawk.to Script-->
+   <!--       
+      -->
+   <!--End of Tawk.to Script-->
+   <body>
       <!-- Facebook like API follows. -->
-      <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+      <div id="fb-root" class=" fb_reset">
+         <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div></div>
+         </div>
+      </div>
       <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
       </script>
-      
-          <div id="outer-container">
-              <div id="inner-container">
-                  
-                      
-                          <div id="header">
-                              
-                                  <a href="https://utopia-game.com/shared//"><div id="header-logo"></div></a>
-                              
-                              <div id="header-navigation"><div class="navigation"><a href="https://utopia-game.com/wol/sit/game/throne">SITTER</a></div>
-                                  
-                                      <div class="navigation"><a href="https://utopia-game.com/shared/lobby/">Lobby</a></div>
-                                      <div class="navigation"><a class="shop-login-link" href="https://utopia-game.com/wol/game/build#">Shop</a></div>
-                                      <div class="navigation"><a href="https://utopia-game.com/shared/common/ranking_history">Rankings</a></div>
-                                      <div class="navigation"><a href="http://forums.utopia-game.com/forumdisplay.php?1527-Utopia" target="_blank">Forum</a></div>
-                                      <div class="navigation"><a href="http://wiki.utopia-game.com/index.php?title=Game_Rules" target="_blank">Rules</a></div>
-                                      <div class="navigation"><a href="http://utopia-game.com/guide/" target="_blank">Guide</a></div>
-                                  
-                                  <div class="navigation"><a href="http://wiki.utopia-game.com/" target="_blank">Wiki</a></div>
-                                  <div class="navigation"><a href="http://blog.utopia-game.com/" target="_blank">Blog</a></div>
-                              </div>
-
-                                  <div id="header-navigation-2nd-level">
-                                      
-                                      <!--===<div class="navigation"><a href="/shared//refer_a_friend" target="_blank">Refer A Friend</a></div>-->
-                                      <div class="navigation"><a href="https://utopia-game.com/wol/game/game_bonuses">Bonuses</a></div>
-                                      <div class="navigation"><a href="https://utopia-game.com/wol/game/create_your_kingdom">Create A KD</a></div>
-                                      <div class="navigation"><a href="https://utopia-game-store.myshopify.com/">Merchandise</a></div>
-                                      <div class="navigation"><a href="https://utopia-game.com/wol/game/intel_bot">Intel-Bot</a></div>
-                                      <div class="navigation"><a href="https://utopia-game.com/wol/game/vote_theme">Theme Competition</a></div>
-                                      
-                                      
-                                  </div>
-                              
-                              <div>
-                                  <form id="id-shop-login-form" method="post" action="https://shop.utopia-game.com/account_management/login_from_game/">
-                                      <input type="hidden" name="auth_token" value="LKzL9JP9UPPU7S0hRXEfko61bgUfNtEbP2QMKlwuslyvHxJ5+j/whvohCjkkiT91/pyoA3nTzoEgvIpmJ/+vlSk4bWbwakttAwYFcUqoO/om1D5ZB6iZ+QLHGMd2ppWNJGV1n5TB1TNkHREEpr7v59FQ4S7vdS9vbcOQjTKtHMkicI4b+cs+iCQ+R+ROobjhLQCLSajnZQfElpC80r+zlw==">
-                                      <input type="hidden" name="checksum" value="203e6b0f0398b7cb3963b0d233217563">
-                                  </form>
-                              </div>
-                                  <div id="account-container">
-                                      <div id="account-header" rel="#account-details">
-                                          
-                                              <div class="account-image" style="background:none;">
-                                                  <img src="/assets/786079e333ed964f610d99c77e0d79d24c9e5131.jpg" width="25" height="25">
-                                              </div>
-                                          
-                                          <div class="account-name">
-                                              
-                                                  Katrin
-                                              
-                                          </div>
-                                          <div class="down-arrow"></div>
-                                      </div>
-                                      <div id="account-details" class="shadow navigation">
-                                          <div class="account-title">Account Details</div>
-                                          <div class="account-summary">
-                                              <div>Katrin Naravi</div>
-                                              <div>kt.naravi@gmail.com</div>
-                                              
-
-                                              
-                                          </div>
-                                          <div id="account-links">
-                                              <div id="account-link-remove-ads"><a href="https://utopia-game.com/shared/adblocker/update/">Remove&nbsp;Advertising</a></div>
-                                              <div id="account-link-edit-profile"><a href="https://utopia-game.com/shared//user_profile_edit/">Public&nbsp;Profile</a></div>
-                                              <div id="account-link-settings"><a href="https://utopia-game.com/shared//account_settings/">Account&nbsp;Settings</a></div>
-                                              <div id="account-link-report-bug"><a href="https://utopia-game.com/shared/feedback/report_bug_instructions/">Report&nbsp;Bug</a></div>
-                                              <div id="account-link-refer-friends"><a href="https://utopia-game.com/shared//refer_players">Refer&nbsp;Friends</a></div>
-                                          </div>
-                                          
-
-                                          <div class="account-signout"><a href="https://utopia-game.com/shared//logout/?next=/">Log&nbsp;Out</a></div>
-                                      </div>
-                                  </div>
-                              
-                          </div>
-                      
-                  
-
-                  <div id="ircchat"><div id="irccontainer" style="display: table; border: 1px solid black; position: relative; width: 100%; height: 85px; visibility: visible;"><div id="showchat" style="width: 80%;height:85px;overflow:auto;-webkit-overflow-scrolling: touch;resize: vertical;">	        <table width="100%" border="1" style="border: 1px solid #ccc;"><tbody><tr style="border: 1px #ccc solid;"><td>22:04</td><td align="center"><font color="red">hayyie</font></td><td>&lt;@541411040584269842&gt; conquest?</td></tr><tr style="border: 1px #ccc solid;"><td>23:41</td><td align="center"><font color="red">invi3i#0</font></td><td>only 112.9</td></tr><tr style="border: 1px #ccc solid;"><td>09:43</td><td align="center"><font color="red">h3nry</font></td><td>0 food</td></tr><tr style="border: 1px #ccc solid;"><td>13:14</td><td align="center"><font color="red">hiakz#0</font></td><td>Set sitter &lt;@539814277117247488&gt;</td></tr><tr style="border: 1px #ccc solid;"><td>21:19</td><td align="center"><font color="red">invi3i#0</font></td><td>&lt;@409826625794998274&gt;</td></tr><tr style="border: 1px #ccc solid;"><td>06:54</td><td align="center"><font color="red">jeffff</font></td><td>&lt;@577801730520121344&gt; pls collect ur bottle</td></tr><tr style="border: 1px #ccc solid;"><td>13:11</td><td align="center"><font color="red">royz</font></td><td>&lt;@270729922987819009&gt; /list popspace</td></tr></tbody></table></div><div id="irconline" style="position:absolute;top:0px;left:80%;width:20%;overflow-y:auto;height:100%;">	        INGAME (6)<hr>Jeffrey<br>Eddy<br>trinkz<br>wolf<br>sharkx<br>katie<br><br></div></div><br><center>Room: <span class="chat_toogle selected" style="cursor: pointer; font-weight: bold; text-decoration: underline;">Chat</span> / <span class="chat_toogle" style="cursor: pointer;">Events</span> |&nbsp;Text: <input type="text" id="ircmsg" size="50"> <button id="refreshchat">Send</button><button id="resizeirc">Size</button><button id="closeirc">Close</button></center></div><div id="middle">
-                      <div id="left-column">
-
-                              
-                                  
-                                      
-                                  
-                              
-
-                          <div id="content-area">
-                              
-
-  
-  <div id="game-navigation">
-      <div class="current-date">Jan 10, YR1</div>
-
-      
-      <div class="navigation">
-          <div><a href="https://utopia-game.com/wol/game/throne">Throne</a><a href="https://utopia-game.com/wol/game/council_state"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
-          <div><a href="https://utopia-game.com/wol/game/kingdom_details">Kingdom</a></div><div><a id="enemylink" href="https://utopia-game.com/wol/game/kingdom_details/6/10">Enemy</a></div>
-          <div><a href="https://utopia-game.com/wol/game/province_news">News</a></div>
-          <div><a href="https://utopia-game.com/wol/game/kingdom_news">KD News</a></div>
-      </div>
-
-      
-      <div class="navigation">
-          <div><a href="https://utopia-game.com/wol/game/explore">Explore</a></div>
-          <div><a href="https://utopia-game.com/wol/game/build">Growth</a><a href="https://utopia-game.com/wol/game/council_internal"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
-          <div><a href="https://utopia-game.com/wol/game/science">Sciences</a></div>
-          <div><a href="https://utopia-game.com/wol/game/train_army">Military</a><a href="https://utopia-game.com/wol/game/council_military"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
-          <div><a href="https://utopia-game.com/wol/game/wizards">Wizards</a></div>
-      </div>
-
-      
-      <div class="navigation">
-          <div><a href="https://utopia-game.com/wol/game/enchantment">Mystics</a><a href="https://utopia-game.com/wol/game/council_spells"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div><div><a href="https://utopia-game.com/wol/game/sorcery">Sorcery</a></div>
-          <div><a href="https://utopia-game.com/wol/game/thievery">Thievery</a></div>
-          <div><a href="https://utopia-game.com/wol/game/send_armies">War&nbsp;Room</a></div>
-          <div><a href="https://utopia-game.com/wol/game/province_target_finder">Targets</a></div>
-          <div><a href="https://utopia-game.com/wol/game/aid">Aid</a></div>
-
-          
-              
-                  
-                      
-                          <div><a href="https://utopia-game.com/wol/game/info_dragon">Dragons</a></div>
-                      
-                  
-              
-          
-
-          
-              
-                  <div><a href="https://utopia-game.com/wol/game/cast_ritual">Rituals</a></div>
-              
-          
-      </div>
-
-      <div class="navigation">
-          <div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">New IS</a></div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
-      </a></div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
-
-      
-      </a><div class="navigation"><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
-          </a><div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank"></a><a href="https://utopia-game.com/wol/mail/inbox/">Mail</a></div>
-          <div><a href="https://utopia-game.com/wol/kingdom_forum/topics/">Forum</a></div><div><a id="kdsite" onclick="openkdsite();" href="https://utopia-game.com/wol/game/build#" target="_blank">Intel-Site</a></div>
-          
-              <div><a href="https://utopia-game.com/wol/war_forum/topics/">War&nbsp;Forum</a></div>
-          
-      </div>
-
-      
-      <div class="navigation">
-          
-          
-
-          <div><a href="https://utopia-game.com/wol/game/vote">Politics</a></div>
-          <div><a href="https://utopia-game.com/wol/game/ranking">Rankings</a></div>
-      </div>
-
-      
-      <div class="navigation">
-          <div><a href="https://utopia-game.com/wol/game/preferences/">Preferences</a></div>
-          <div><a href="https://utopia-game.com/wol/game/build#" onclick="starttutorial(&#39;game_build&#39;);">Tutorial</a></div>
-          <div><a href="https://utopia-game.com/wol/game/generals">Generals.io</a></div>
-      <div><input class="munkbutton" type="button" id="toggler2" value="Bot prefs"><br><input class="munkbutton" type="button" id="getbot" value="bot">|<input class="munkbutton" type="button" id="openirc" value="IRC"></div><div id="prefs"></div><p id="donatebox" style="background:white;color:green"></p></div>
-  </div>
-  
-
-  
-      
-
-  <table id="resource-bar">
-      <thead>
-          <tr>
-              <th>Money</th>
-              <th>Peasants</th>
-              <th>Food</th>
-              <th>Runes</th>
-              <th>Net Worth</th>
-              <th>Land</th>
-              <th>Net Worth/Acre</th>
-          </tr>
-      </thead>
-      <tbody>
-
-          
-          
-          
-
-              
-
-          <tr>
-              <th>22,045</th>
-              <th>4,608</th>
-              <th>116,100</th>
-              <th>6,718</th>
-              <th>100,871</th>
-              <th>655</th>
-              <th>154.002</th>
-          </tr>
-
-          
-          
-          
-      </tbody>
-  </table>
-
-
-  
-  
-                              
-
-  <div id="overlay" style="visibility: visible;"> BOT:<input size="30" type="text" id="botcommand"><button id="getresponse">Send</button><button onclick="$(&#39;#botresponse&#39;).html(&#39;&#39;);">Clear</button><button onclick="$(&#39;#overlay&#39;).fadeOut();">Close</button>Eg. def/sot/som/list<div id="botresponse" style=""></div><div id="botload"></div></div><div class="game-header" style="display: block;"><div class="game-header">
-  
-  
-  
-  <h1>Build</h1>
-  <a href="https://utopia-game.com/wol/game/raze"><h1>Raze</h1></a>
-  <a href="https://utopia-game.com/wol/game/cancel"><h1>Cancel</h1></a>
-
-  </div></div>
-
-  <div class="game-content" style="visibility: visible; display: block;">
-  
-  
-  
-
-
-
-  <p>
-      Building infrastructure is absolutely vital to the long term growth of our province. Here you may order the construction different types of buildings, or choose to destroy some buildings so that you can use the land for other purposes. More can be learned about benefits of each building from the <a href="http://wiki.utopia-game.com/index.php?title=Growth">guide</a> and the <a href="https://utopia-game.com/wol/game/council_internal">Internal Affairs</a> council page.
-  </p>
-
-  
-  <!-- Values for Growth Building Calc -->
-  <input id="growth_total_land" type="hidden" value="655">
-  <input id="growth_buildings" type="hidden" value="[{&quot;buildingId&quot;: -1, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Barren Land&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 0, &quot;quantityScheduled&quot;: 54, &quot;name&quot;: &quot;Homes&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 77}, {&quot;buildingId&quot;: 1, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Farms&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 58}, {&quot;buildingId&quot;: 2, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Mills&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 3, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Banks&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 4, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Training Grounds&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 5, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Armouries&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 6, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Military Barracks&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 7, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Forts&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 39}, {&quot;buildingId&quot;: 8, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Castles&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 9, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Hospitals&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 10, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Guilds&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 84}, {&quot;buildingId&quot;: 11, &quot;quantityScheduled&quot;: 2, &quot;name&quot;: &quot;Towers&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 129}, {&quot;buildingId&quot;: 12, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Thieves&#39; Dens&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 45}, {&quot;buildingId&quot;: 13, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Watch Towers&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 97}, {&quot;buildingId&quot;: 14, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Universities&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 66}, {&quot;buildingId&quot;: 15, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Libraries&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 16, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Stables&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 17, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Dungeons&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}]">
-  <input id="growth_type" type="hidden" value="build">
-
-  <table class="two-column-stats">
-      <tbody>
-          <tr>
-              <th>Total Land</th>
-              <td>655 acres</td>
-
-              <th>Construction Cost</th>
-              <td>532gc per acre</td>
-          </tr>
-          <tr>
-              <th>Total Undeveloped land</th>
-              <td>0 acres</td>
-
-              <th>Maximum Buildable Now</th>
-              <td>0 acres</td>
-          </tr>
-          <tr>
-              <th>Construction Time</th>
-              <td>16 days</td>
-
-              <th>Raze Cost</th>
-              <td>332gc per acre</td>
-          </tr>
-          <tr>
-              <th>Free Building Credits</th>
-              <td>0</td>
-
-              <th>Maximum Razeable Now</th>
-              <td>66 acres</td>
-          </tr>
-
-          <tr>
-              <th colspan="2"></th>
-              <th colspan="2"><a href="https://utopia-game.com/wol/game/council_internal">More....</a></th>
-          </tr>
-      </tbody><tbody>
-  </tbody></table>
-
-
-  
-      <form method="POST" action="https://utopia-game.com/wol/game/build">
-          <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="JGhvhKAtsWpB3wZ3De4NqeiTXWZi29f2"></div>
-          <table>
-              <thead>
-                  <tr>
-                      <th>Building</th>
-                      <th>You Own</th>
-                      <th>In Progress</th>
-                      <th></th>
-                      <th>Building</th>
-                      <th>You Own</th>
-                      <th>In Progress</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  
-                  <tr>
-                      <th>Homes</th>
-                      <td>77</td>
-                      <td>54</td>
-                      <td><input id="id_quantity_0" type="text" class="four-digit-input" name="quantity_0"></td>
-                      
-                      <th>Farms</th>
-                      <td>58</td>
-                      <td>1</td>
-                      <td><input id="id_quantity_1" type="text" class="four-digit-input" name="quantity_1"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Mills</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_2" type="text" class="four-digit-input" name="quantity_2"></td>
-                      
-                      <th>Banks</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_3" type="text" class="four-digit-input" name="quantity_3"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Training Grounds</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_4" type="text" class="four-digit-input" name="quantity_4"></td>
-                      
-                      <th>Armouries</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_5" type="text" class="four-digit-input" name="quantity_5"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Military Barracks</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_6" type="text" class="four-digit-input" name="quantity_6"></td>
-                      
-                      <th>Forts</th>
-                      <td>39</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_7" type="text" class="four-digit-input" name="quantity_7"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Castles</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_8" type="text" class="four-digit-input" name="quantity_8"></td>
-                      
-                      <th>Hospitals</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_9" type="text" class="four-digit-input" name="quantity_9"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Guilds</th>
-                      <td>84</td>
-                      <td>1</td>
-                      <td><input id="id_quantity_10" type="text" class="four-digit-input" name="quantity_10"></td>
-                      
-                      <th>Towers</th>
-                      <td>129</td>
-                      <td>2</td>
-                      <td><input id="id_quantity_11" type="text" class="four-digit-input" name="quantity_11"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Thieves' Dens</th>
-                      <td>45</td>
-                      <td>1</td>
-                      <td><input id="id_quantity_12" type="text" class="four-digit-input" name="quantity_12"></td>
-                      
-                      <th>Watch Towers</th>
-                      <td>97</td>
-                      <td>1</td>
-                      <td><input id="id_quantity_13" type="text" class="four-digit-input" name="quantity_13"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Universities</th>
-                      <td>66</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_14" type="text" class="four-digit-input" name="quantity_14"></td>
-                      
-                      <th>Libraries</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_15" type="text" class="four-digit-input" name="quantity_15"></td>
-                      
-                  </tr>
-                  
-                  <tr>
-                      <th>Stables</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_16" type="text" class="four-digit-input" name="quantity_16"></td>
-                      
-                      <th>Dungeons</th>
-                      <td>0</td>
-                      <td>0</td>
-                      <td><input id="id_quantity_17" type="text" class="four-digit-input" name="quantity_17"></td>
-                      
-                  </tr>
-                  
-              </tbody><tbody>
-          </tbody></table>
-          <p><label for="id_accelerate">Accelerated Construction (Double Cost and/or use of Free Building Credits).</label><div class="checker" id="uniform-id_accelerate"><span><input type="checkbox" name="accelerate" id="id_accelerate" style="opacity: 0;"></span></div><label for="id_use_credits">Use available credits:</label><div class="checker" id="uniform-id_use_credits"><span class="checked"><input checked="checked" type="checkbox" name="use_credits" id="id_use_credits" style="opacity: 0;"></span></div></p>
-          <input type="submit" value="Order Construction" name="build">
-      </form>
-  
-
-  <table id="buildtool">
-      <thead><tr><th colspan="9">
-          <input class="button-link" style="padding-right: 3px; padding-left: 3px; margin-right: 10px;" id="growth_delete" type="submit" value="Delete Build" onclick="">
-          <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_save" type="submit" value="Save Build" onclick="">
-          <div class="selector" name="build_select_container" id="build_select_container" style="width: 310px; background-position: -472px -190px !important;">
-              <div class="selector" id="uniform-build_select"><span>current</span><select name="build_select" id="build_select" style="opacity: 0;"><option value="current">current</option><option value="war">war</option><option value="eowcf TM">eowcf TM</option></select></div>
-          </div>
-          <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_fill_in" type="submit" value="Fill-In" onclick="">
-      </th></tr>
-      <tr id="row_build_name" style="display: none"><th colspan="9">
-          <p style="text-align: center; font-size: medium;">Build Name: </p>
-          <input type="text" size="20" id="input_build_name" value="">
-          <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_save_to_local" type="submit" value="Save" onclick="">
-      </th></tr>
-      </thead>
-      
-      
-          <tbody><tr>
-              
-                  
-                      <td id="id_0" class="td_center_bottom">
-                          Homes
-                          <br>
-                          <input type="text" size="2" id="input_0" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_0">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_1" class="td_center_bottom">
-                          Farms
-                          <br>
-                          <input type="text" size="2" id="input_1" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_1">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_2" class="td_center_bottom">
-                          Mills
-                          <br>
-                          <input type="text" size="2" id="input_2" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_2">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_3" class="td_center_bottom">
-                          Banks
-                          <br>
-                          <input type="text" size="2" id="input_3" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_3">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_4" class="td_center_bottom">
-                          Training Grounds
-                          <br>
-                          <input type="text" size="2" id="input_4" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_4">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_5" class="td_center_bottom">
-                          Armouries
-                          <br>
-                          <input type="text" size="2" id="input_5" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_5">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_6" class="td_center_bottom">
-                          Military Barracks
-                          <br>
-                          <input type="text" size="2" id="input_6" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_6">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_7" class="td_center_bottom">
-                          Forts
-                          <br>
-                          <input type="text" size="2" id="input_7" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_7">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_8" class="td_center_bottom">
-                          Castles
-                          <br>
-                          <input type="text" size="2" id="input_8" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_8">0</div>
-                      </td>
-                  
-              
-          </tr>
-          
-      
-          <tr>
-              
-                  
-                      <td id="id_9" class="td_center_bottom">
-                          Hospitals
-                          <br>
-                          <input type="text" size="2" id="input_9" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_9">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_10" class="td_center_bottom">
-                          Guilds
-                          <br>
-                          <input type="text" size="2" id="input_10" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_10">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_11" class="td_center_bottom">
-                          Towers
-                          <br>
-                          <input type="text" size="2" id="input_11" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_11">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_12" class="td_center_bottom">
-                          Thieves' Dens
-                          <br>
-                          <input type="text" size="2" id="input_12" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_12">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_13" class="td_center_bottom">
-                          Watch Towers
-                          <br>
-                          <input type="text" size="2" id="input_13" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_13">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_14" class="td_center_bottom">
-                          Universities
-                          <br>
-                          <input type="text" size="2" id="input_14" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_14">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_15" class="td_center_bottom">
-                          Libraries
-                          <br>
-                          <input type="text" size="2" id="input_15" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_15">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_16" class="td_center_bottom">
-                          Stables
-                          <br>
-                          <input type="text" size="2" id="input_16" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_16">0</div>
-                      </td>
-                  
-              
-                  
-                      <td id="id_17" class="td_center_bottom">
-                          Dungeons
-                          <br>
-                          <input type="text" size="2" id="input_17" value="0">
-                          <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_17">0</div>
-                      </td>
-                  
-              
-          </tr>
-          
-      
-          <tr>
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-                  
-                      <td></td>
-                  
-              
-          </tr>
-          
-      
-      <tr><td colspan="9">
-          <p style="text-align: center; font-size: large;" id="growth_total">Total 100.1%</p>
-      </td></tr>
-  </tbody></table>
-
-  </div>
-  
-                          </div>
-                      </div>
-                      <div id="right-column">
-                          
-                              
-                                  
-                              
-                          
-                      </div>
-
-                      
+      <div id="outer-container">
+         <div id="inner-container">
+            <div id="header">
+               <a href="https://utopia-game.com/shared//">
+                  <div id="header-logo"></div>
+               </a>
+               <div id="header-navigation">
+                  <div class="navigation"><a href="https://utopia-game.com/wol/sit/game/throne">SITTER</a></div>
+                  <div class="navigation"><a href="https://utopia-game.com/shared/lobby/">Lobby</a></div>
+                  <div class="navigation"><a class="shop-login-link" href="https://utopia-game.com/wol/game/build#">Shop</a></div>
+                  <div class="navigation"><a href="https://utopia-game.com/shared/common/ranking_history">Rankings</a></div>
+                  <div class="navigation"><a href="http://forums.utopia-game.com/forumdisplay.php?1527-Utopia" target="_blank">Forum</a></div>
+                  <div class="navigation"><a href="http://wiki.utopia-game.com/index.php?title=Game_Rules" target="_blank">Rules</a></div>
+                  <div class="navigation"><a href="http://utopia-game.com/guide/" target="_blank">Guide</a></div>
+                  <div class="navigation"><a href="http://wiki.utopia-game.com/" target="_blank">Wiki</a></div>
+                  <div class="navigation"><a href="http://blog.utopia-game.com/" target="_blank">Blog</a></div>
+               </div>
+               <div id="header-navigation-2nd-level">
+                  <!--===<div class="navigation"><a href="/shared//refer_a_friend" target="_blank">Refer A Friend</a></div>-->
+                  <div class="navigation"><a href="https://utopia-game.com/wol/game/game_bonuses">Bonuses</a></div>
+                  <div class="navigation"><a href="https://utopia-game.com/wol/game/create_your_kingdom">Create A KD</a></div>
+                  <div class="navigation"><a href="https://utopia-game-store.myshopify.com/">Merchandise</a></div>
+                  <div class="navigation"><a href="https://utopia-game.com/wol/game/intel_bot">Intel-Bot</a></div>
+                  <div class="navigation"><a href="https://utopia-game.com/wol/game/vote_theme">Theme Competition</a></div>
+               </div>
+               <div>
+                  <form id="id-shop-login-form" method="post" action="https://shop.utopia-game.com/account_management/login_from_game/">
+                     <input type="hidden" name="auth_token" value="LKzL9JP9UPPU7S0hRXEfko61bgUfNtEbP2QMKlwuslyvHxJ5+j/whvohCjkkiT91/pyoA3nTzoEgvIpmJ/+vlSk4bWbwakttAwYFcUqoO/om1D5ZB6iZ+QLHGMd2ppWNJGV1n5TB1TNkHREEpr7v59FQ4S7vdS9vbcOQjTKtHMkicI4b+cs+iCQ+R+ROobjhLQCLSajnZQfElpC80r+zlw==">
+                     <input type="hidden" name="checksum" value="203e6b0f0398b7cb3963b0d233217563">
+                  </form>
+               </div>
+               <div id="account-container">
+                  <div id="account-header" rel="#account-details">
+                     <div class="account-image" style="background:none;">
+                        <img src="/assets/786079e333ed964f610d99c77e0d79d24c9e5131.jpg" width="25" height="25">
+                     </div>
+                     <div class="account-name">
+                        Katrin
+                     </div>
+                     <div class="down-arrow"></div>
                   </div>
-
-                  <div id="footer">
-                      <div id="version">
-                          Copyright 2021 MUGA Gaming, LLC - 
-                          
-                          <a href="mailto:UtopiaSupport@Utopia-Game.com?Subject=Support%20ID:3AF5417E" target="_top">Contact Support</a>
-                          
-                          <br> Version: e8b5f0a
-                      </div>
+                  <div id="account-details" class="shadow navigation">
+                     <div class="account-title">Account Details</div>
+                     <div class="account-summary">
+                        <div>Katrin Naravi</div>
+                        <div>kt.naravi@gmail.com</div>
+                     </div>
+                     <div id="account-links">
+                        <div id="account-link-remove-ads"><a href="https://utopia-game.com/shared/adblocker/update/">Remove&nbsp;Advertising</a></div>
+                        <div id="account-link-edit-profile"><a href="https://utopia-game.com/shared//user_profile_edit/">Public&nbsp;Profile</a></div>
+                        <div id="account-link-settings"><a href="https://utopia-game.com/shared//account_settings/">Account&nbsp;Settings</a></div>
+                        <div id="account-link-report-bug"><a href="https://utopia-game.com/shared/feedback/report_bug_instructions/">Report&nbsp;Bug</a></div>
+                        <div id="account-link-refer-friends"><a href="https://utopia-game.com/shared//refer_players">Refer&nbsp;Friends</a></div>
+                     </div>
+                     <div class="account-signout"><a href="https://utopia-game.com/shared//logout/?next=/">Log&nbsp;Out</a></div>
                   </div>
-
-              </div> <!--Close inner-container -->
-          </div> <!--Close outer-container -->
-      
-
+               </div>
+            </div>
+            <div id="ircchat">
+               <div id="irccontainer" style="display: table; border: 1px solid black; position: relative; width: 100%; height: 85px; visibility: visible;">
+                  <div id="showchat" style="width: 80%;height:85px;overflow:auto;-webkit-overflow-scrolling: touch;resize: vertical;">
+                     <table width="100%" border="1" style="border: 1px solid #ccc;">
+                        <tbody>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>22:04</td>
+                              <td align="center"><font color="red">hayyie</font></td>
+                              <td>&lt;@541411040584269842&gt; conquest?</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>23:41</td>
+                              <td align="center"><font color="red">invi3i#0</font></td>
+                              <td>only 112.9</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>09:43</td>
+                              <td align="center"><font color="red">h3nry</font></td>
+                              <td>0 food</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>13:14</td>
+                              <td align="center"><font color="red">hiakz#0</font></td>
+                              <td>Set sitter &lt;@539814277117247488&gt;</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>21:19</td>
+                              <td align="center"><font color="red">invi3i#0</font></td>
+                              <td>&lt;@409826625794998274&gt;</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>06:54</td>
+                              <td align="center"><font color="red">jeffff</font></td>
+                              <td>&lt;@577801730520121344&gt; pls collect ur bottle</td>
+                           </tr>
+                           <tr style="border: 1px #ccc solid;">
+                              <td>13:11</td>
+                              <td align="center"><font color="red">royz</font></td>
+                              <td>&lt;@270729922987819009&gt; /list popspace</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div id="irconline" style="position:absolute;top:0px;left:80%;width:20%;overflow-y:auto;height:100%;">
+                     INGAME (6)
+                     <hr>
+                     Jeffrey<br>Eddy<br>trinkz<br>wolf<br>sharkx<br>katie<br><br>
+                  </div>
+               </div>
+               <br>
+               <center>Room: <span class="chat_toogle selected" style="cursor: pointer; font-weight: bold; text-decoration: underline;">Chat</span> / <span class="chat_toogle" style="cursor: pointer;">Events</span> |&nbsp;Text: <input type="text" id="ircmsg" size="50"> <button id="refreshchat">Send</button><button id="resizeirc">Size</button><button id="closeirc">Close</button></center>
+            </div>
+            <div id="middle">
+               <div id="left-column">
+                  <div id="content-area">
+                     <div id="game-navigation">
+                        <div class="current-date">Jan 10, YR1</div>
+                        <div class="navigation">
+                           <div><a href="https://utopia-game.com/wol/game/throne">Throne</a><a href="https://utopia-game.com/wol/game/council_state"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
+                           <div><a href="https://utopia-game.com/wol/game/kingdom_details">Kingdom</a></div>
+                           <div><a id="enemylink" href="https://utopia-game.com/wol/game/kingdom_details/6/10">Enemy</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/province_news">News</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/kingdom_news">KD News</a></div>
+                        </div>
+                        <div class="navigation">
+                           <div><a href="https://utopia-game.com/wol/game/explore">Explore</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/build">Growth</a><a href="https://utopia-game.com/wol/game/council_internal"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
+                           <div><a href="https://utopia-game.com/wol/game/science">Sciences</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/train_army">Military</a><a href="https://utopia-game.com/wol/game/council_military"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
+                           <div><a href="https://utopia-game.com/wol/game/wizards">Wizards</a></div>
+                        </div>
+                        <div class="navigation">
+                           <div><a href="https://utopia-game.com/wol/game/enchantment">Mystics</a><a href="https://utopia-game.com/wol/game/council_spells"><img style="vertical-align:middle" height="20" src="/assets/advisor.png"></a></div>
+                           <div><a href="https://utopia-game.com/wol/game/sorcery">Sorcery</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/thievery">Thievery</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/send_armies">War&nbsp;Room</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/province_target_finder">Targets</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/aid">Aid</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/info_dragon">Dragons</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/cast_ritual">Rituals</a></div>
+                        </div>
+                        <div class="navigation">
+                           <div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">New IS</a></div>
+                           <a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
+                           </a>
+                        </div>
+                        <a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
+                        </a>
+                        <div class="navigation">
+                           <a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank">
+                           </a>
+                           <div><a class="navigation_underline" href="https://intel.utopia.site/login?t=2871e214e0bcab684123ccbc644c106d160a6ee7&amp;s=1" target="_blank"></a><a href="https://utopia-game.com/wol/mail/inbox/">Mail</a></div>
+                           <div><a href="https://utopia-game.com/wol/kingdom_forum/topics/">Forum</a></div>
+                           <div><a id="kdsite" onclick="openkdsite();" href="https://utopia-game.com/wol/game/build#" target="_blank">Intel-Site</a></div>
+                           <div><a href="https://utopia-game.com/wol/war_forum/topics/">War&nbsp;Forum</a></div>
+                        </div>
+                        <div class="navigation">
+                           <div><a href="https://utopia-game.com/wol/game/vote">Politics</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/ranking">Rankings</a></div>
+                        </div>
+                        <div class="navigation">
+                           <div><a href="https://utopia-game.com/wol/game/preferences/">Preferences</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/build#" onclick="starttutorial(&#39;game_build&#39;);">Tutorial</a></div>
+                           <div><a href="https://utopia-game.com/wol/game/generals">Generals.io</a></div>
+                           <div><input class="munkbutton" type="button" id="toggler2" value="Bot prefs"><br><input class="munkbutton" type="button" id="getbot" value="bot">|<input class="munkbutton" type="button" id="openirc" value="IRC"></div>
+                           <div id="prefs"></div>
+                           <p id="donatebox" style="background:white;color:green"></p>
+                        </div>
+                     </div>
+                     <table id="resource-bar">
+                        <thead>
+                           <tr>
+                              <th>Money</th>
+                              <th>Peasants</th>
+                              <th>Food</th>
+                              <th>Runes</th>
+                              <th>Net Worth</th>
+                              <th>Land</th>
+                              <th>Net Worth/Acre</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th>22,045</th>
+                              <th>4,608</th>
+                              <th>116,100</th>
+                              <th>6,718</th>
+                              <th>100,871</th>
+                              <th>655</th>
+                              <th>154.002</th>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <div id="overlay" style="visibility: visible;">
+                        BOT:<input size="30" type="text" id="botcommand"><button id="getresponse">Send</button><button onclick="$(&#39;#botresponse&#39;).html(&#39;&#39;);">Clear</button><button onclick="$(&#39;#overlay&#39;).fadeOut();">Close</button>Eg. def/sot/som/list
+                        <div id="botresponse" style=""></div>
+                        <div id="botload"></div>
+                     </div>
+                     <div class="game-header" style="display: block;">
+                        <div class="game-header">
+                           <h1>Build</h1>
+                           <a href="https://utopia-game.com/wol/game/raze">
+                              <h1>Raze</h1>
+                           </a>
+                           <a href="https://utopia-game.com/wol/game/cancel">
+                              <h1>Cancel</h1>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="game-content" style="visibility: visible; display: block;">
+                        <p>
+                           Building infrastructure is absolutely vital to the long term growth of our province. Here you may order the construction different types of buildings, or choose to destroy some buildings so that you can use the land for other purposes. More can be learned about benefits of each building from the <a href="http://wiki.utopia-game.com/index.php?title=Growth">guide</a> and the <a href="https://utopia-game.com/wol/game/council_internal">Internal Affairs</a> council page.
+                        </p>
+                        <!-- Values for Growth Building Calc -->
+                        <input id="growth_total_land" type="hidden" value="655">
+                        <input id="growth_buildings" type="hidden" value="[{&quot;buildingId&quot;: -1, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Barren Land&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 0, &quot;quantityScheduled&quot;: 54, &quot;name&quot;: &quot;Homes&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 77}, {&quot;buildingId&quot;: 1, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Farms&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 58}, {&quot;buildingId&quot;: 2, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Mills&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 3, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Banks&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 4, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Training Grounds&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 5, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Armouries&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 6, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Military Barracks&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 7, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Forts&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 39}, {&quot;buildingId&quot;: 8, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Castles&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 9, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Hospitals&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 10, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Guilds&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 84}, {&quot;buildingId&quot;: 11, &quot;quantityScheduled&quot;: 2, &quot;name&quot;: &quot;Towers&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 129}, {&quot;buildingId&quot;: 12, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Thieves&#39; Dens&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 45}, {&quot;buildingId&quot;: 13, &quot;quantityScheduled&quot;: 1, &quot;name&quot;: &quot;Watch Towers&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 97}, {&quot;buildingId&quot;: 14, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Universities&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 66}, {&quot;buildingId&quot;: 15, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Libraries&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 16, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Stables&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}, {&quot;buildingId&quot;: 17, &quot;quantityScheduled&quot;: 0, &quot;name&quot;: &quot;Dungeons&quot;, &quot;effects&quot;: null, &quot;quantityOwned&quot;: 0}]">
+                        <input id="growth_type" type="hidden" value="build">
+                        <table class="two-column-stats">
+                           <tbody>
+                              <tr>
+                                 <th>Total Land</th>
+                                 <td>655 acres</td>
+                                 <th>Construction Cost</th>
+                                 <td>532gc per acre</td>
+                              </tr>
+                              <tr>
+                                 <th>Total Undeveloped land</th>
+                                 <td>0 acres</td>
+                                 <th>Maximum Buildable Now</th>
+                                 <td>0 acres</td>
+                              </tr>
+                              <tr>
+                                 <th>Construction Time</th>
+                                 <td>16 days</td>
+                                 <th>Raze Cost</th>
+                                 <td>332gc per acre</td>
+                              </tr>
+                              <tr>
+                                 <th>Free Building Credits</th>
+                                 <td>0</td>
+                                 <th>Maximum Razeable Now</th>
+                                 <td>66 acres</td>
+                              </tr>
+                              <tr>
+                                 <th colspan="2"></th>
+                                 <th colspan="2"><a href="https://utopia-game.com/wol/game/council_internal">More....</a></th>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                           </tbody>
+                        </table>
+                        <form method="POST" action="https://utopia-game.com/wol/game/build">
+                           <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="JGhvhKAtsWpB3wZ3De4NqeiTXWZi29f2"></div>
+                           <table>
+                              <thead>
+                                 <tr>
+                                    <th>Building</th>
+                                    <th>You Own</th>
+                                    <th>In Progress</th>
+                                    <th></th>
+                                    <th>Building</th>
+                                    <th>You Own</th>
+                                    <th>In Progress</th>
+                                    <th></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th>Homes</th>
+                                    <td>77</td>
+                                    <td>54</td>
+                                    <td><input id="id_quantity_0" type="text" class="four-digit-input" name="quantity_0"></td>
+                                    <th>Farms</th>
+                                    <td>58</td>
+                                    <td>1</td>
+                                    <td><input id="id_quantity_1" type="text" class="four-digit-input" name="quantity_1"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Mills</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_2" type="text" class="four-digit-input" name="quantity_2"></td>
+                                    <th>Banks</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_3" type="text" class="four-digit-input" name="quantity_3"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Training Grounds</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_4" type="text" class="four-digit-input" name="quantity_4"></td>
+                                    <th>Armouries</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_5" type="text" class="four-digit-input" name="quantity_5"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Military Barracks</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_6" type="text" class="four-digit-input" name="quantity_6"></td>
+                                    <th>Forts</th>
+                                    <td>39</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_7" type="text" class="four-digit-input" name="quantity_7"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Castles</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_8" type="text" class="four-digit-input" name="quantity_8"></td>
+                                    <th>Hospitals</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_9" type="text" class="four-digit-input" name="quantity_9"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Guilds</th>
+                                    <td>84</td>
+                                    <td>1</td>
+                                    <td><input id="id_quantity_10" type="text" class="four-digit-input" name="quantity_10"></td>
+                                    <th>Towers</th>
+                                    <td>129</td>
+                                    <td>2</td>
+                                    <td><input id="id_quantity_11" type="text" class="four-digit-input" name="quantity_11"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Thieves' Dens</th>
+                                    <td>45</td>
+                                    <td>1</td>
+                                    <td><input id="id_quantity_12" type="text" class="four-digit-input" name="quantity_12"></td>
+                                    <th>Watch Towers</th>
+                                    <td>97</td>
+                                    <td>1</td>
+                                    <td><input id="id_quantity_13" type="text" class="four-digit-input" name="quantity_13"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Universities</th>
+                                    <td>66</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_14" type="text" class="four-digit-input" name="quantity_14"></td>
+                                    <th>Libraries</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_15" type="text" class="four-digit-input" name="quantity_15"></td>
+                                 </tr>
+                                 <tr>
+                                    <th>Stables</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_16" type="text" class="four-digit-input" name="quantity_16"></td>
+                                    <th>Dungeons</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td><input id="id_quantity_17" type="text" class="four-digit-input" name="quantity_17"></td>
+                                 </tr>
+                              </tbody>
+                              <tbody>
+                              </tbody>
+                           </table>
+                           <p><label for="id_accelerate">Accelerated Construction (Double Cost and/or use of Free Building Credits).</label>
+                           <div class="checker" id="uniform-id_accelerate"><span><input type="checkbox" name="accelerate" id="id_accelerate" style="opacity: 0;"></span></div>
+                           <label for="id_use_credits">Use available credits:</label>
+                           <div class="checker" id="uniform-id_use_credits"><span class="checked"><input checked="checked" type="checkbox" name="use_credits" id="id_use_credits" style="opacity: 0;"></span></div>
+                           </p>
+                           <input type="submit" value="Order Construction" name="build">
+                        </form>
+                        <table id="buildtool">
+                           <thead>
+                              <tr>
+                                 <th colspan="9">
+                                    <input class="button-link" style="padding-right: 3px; padding-left: 3px; margin-right: 10px;" id="growth_delete" type="submit" value="Delete Build" onclick="">
+                                    <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_save" type="submit" value="Save Build" onclick="">
+                                    <div class="selector" name="build_select_container" id="build_select_container" style="width: 310px; background-position: -472px -190px !important;">
+                                       <div class="selector" id="uniform-build_select">
+                                          <span>current</span>
+                                          <select name="build_select" id="build_select" style="opacity: 0;">
+                                             <option value="current">current</option>
+                                             <option value="war">war</option>
+                                             <option value="eowcf TM">eowcf TM</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_fill_in" type="submit" value="Fill-In" onclick="">
+                                 </th>
+                              </tr>
+                              <tr id="row_build_name" style="display: none">
+                                 <th colspan="9">
+                                    <p style="text-align: center; font-size: medium;">Build Name: </p>
+                                    <input type="text" size="20" id="input_build_name" value="">
+                                    <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_save_to_local" type="submit" value="Save" onclick="">
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td id="id_0" class="td_center_bottom">
+                                    Homes
+                                    <br>
+                                    <input type="text" size="2" id="input_0" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_0">0</div>
+                                 </td>
+                                 <td id="id_1" class="td_center_bottom">
+                                    Farms
+                                    <br>
+                                    <input type="text" size="2" id="input_1" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_1">0</div>
+                                 </td>
+                                 <td id="id_2" class="td_center_bottom">
+                                    Mills
+                                    <br>
+                                    <input type="text" size="2" id="input_2" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_2">0</div>
+                                 </td>
+                                 <td id="id_3" class="td_center_bottom">
+                                    Banks
+                                    <br>
+                                    <input type="text" size="2" id="input_3" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_3">0</div>
+                                 </td>
+                                 <td id="id_4" class="td_center_bottom">
+                                    Training Grounds
+                                    <br>
+                                    <input type="text" size="2" id="input_4" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_4">0</div>
+                                 </td>
+                                 <td id="id_5" class="td_center_bottom">
+                                    Armouries
+                                    <br>
+                                    <input type="text" size="2" id="input_5" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_5">0</div>
+                                 </td>
+                                 <td id="id_6" class="td_center_bottom">
+                                    Military Barracks
+                                    <br>
+                                    <input type="text" size="2" id="input_6" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_6">0</div>
+                                 </td>
+                                 <td id="id_7" class="td_center_bottom">
+                                    Forts
+                                    <br>
+                                    <input type="text" size="2" id="input_7" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_7">0</div>
+                                 </td>
+                                 <td id="id_8" class="td_center_bottom">
+                                    Castles
+                                    <br>
+                                    <input type="text" size="2" id="input_8" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_8">0</div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td id="id_9" class="td_center_bottom">
+                                    Hospitals
+                                    <br>
+                                    <input type="text" size="2" id="input_9" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_9">0</div>
+                                 </td>
+                                 <td id="id_10" class="td_center_bottom">
+                                    Guilds
+                                    <br>
+                                    <input type="text" size="2" id="input_10" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_10">0</div>
+                                 </td>
+                                 <td id="id_11" class="td_center_bottom">
+                                    Towers
+                                    <br>
+                                    <input type="text" size="2" id="input_11" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_11">0</div>
+                                 </td>
+                                 <td id="id_12" class="td_center_bottom">
+                                    Thieves' Dens
+                                    <br>
+                                    <input type="text" size="2" id="input_12" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_12">0</div>
+                                 </td>
+                                 <td id="id_13" class="td_center_bottom">
+                                    Watch Towers
+                                    <br>
+                                    <input type="text" size="2" id="input_13" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_13">0</div>
+                                 </td>
+                                 <td id="id_14" class="td_center_bottom">
+                                    Universities
+                                    <br>
+                                    <input type="text" size="2" id="input_14" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_14">0</div>
+                                 </td>
+                                 <td id="id_15" class="td_center_bottom">
+                                    Libraries
+                                    <br>
+                                    <input type="text" size="2" id="input_15" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_15">0</div>
+                                 </td>
+                                 <td id="id_16" class="td_center_bottom">
+                                    Stables
+                                    <br>
+                                    <input type="text" size="2" id="input_16" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_16">0</div>
+                                 </td>
+                                 <td id="id_17" class="td_center_bottom">
+                                    Dungeons
+                                    <br>
+                                    <input type="text" size="2" id="input_17" value="0">
+                                    <div style="text-align: center; background-color: grey; width: 40px; margin: auto;" id="build_17">0</div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                              </tr>
+                              <tr>
+                                 <td colspan="9">
+                                    <p style="text-align: center; font-size: large;" id="growth_total">Total 100.1%</p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div id="right-column">
+               </div>
+            </div>
+            <div id="footer">
+               <div id="version">
+                  Copyright 2021 MUGA Gaming, LLC - 
+                  <a href="mailto:UtopiaSupport@Utopia-Game.com?Subject=Support%20ID:3AF5417E" target="_top">Contact Support</a>
+                  <br> Version: e8b5f0a
+               </div>
+            </div>
+         </div>
+         <!--Close inner-container -->
+      </div>
+      <!--Close outer-container -->
       <!-- Extra HTML -->
       <div class="overlay" id="report-content-dialog">
-  <h1>Report Content</h1>
-  <div class="report-dialog-content">
-      <p>You are about to report that the content below is in breach of the <a href="http://wiki.utopia-game.com/index.php?title=Game_Rules#Language_.26_Attitude">Code of Conduct</a>. This is a serious allegation, which may result in disciplinary action against the player that uploaded it.</p><p><strong>WARNING: Falsely reporting content is also considered an offense, and may result in your account being suspended, or worse.</strong></p>
-      <div class="reported-content"></div>
-      <input class="button-link" type="submit" value="Report this content">
-  </div>
-  <div class="spinner"></div>
-</div>
-<div style="display:none" id="report-this-label">Report this</div>
-<div style="display:none" id="report-this-url">/shared/feedback/report_content/</div>
-
-      
-  
-  
-  
-      <div id="munkbot_secret" api="L1lEXf6oAtFfqXxiit1mXXahOKvNTH9PV6g9eo3I+JIzZKL3xprq/fZdNfr5H/BG"></div>
-  
-
-
-      <div id="recruitment-chat">
-          
+         <h1>Report Content</h1>
+         <div class="report-dialog-content">
+            <p>You are about to report that the content below is in breach of the <a href="http://wiki.utopia-game.com/index.php?title=Game_Rules#Language_.26_Attitude">Code of Conduct</a>. This is a serious allegation, which may result in disciplinary action against the player that uploaded it.</p>
+            <p><strong>WARNING: Falsely reporting content is also considered an offense, and may result in your account being suspended, or worse.</strong></p>
+            <div class="reported-content"></div>
+            <input class="button-link" type="submit" value="Report this content">
+         </div>
+         <div class="spinner"></div>
       </div>
-      
-  
-<iframe name="__tcfapiLocator" style="display: none;" src="/assets/saved_resource.html"></iframe><script src="/assets/stable.js"></script><div style="position:absolute;left:50%;margin-left:-100px;margin-top:0px;top:0px;width:200px; z-index:1;height:20;background-color:grey;font-size:10px;text-align: center;cursor:pointer;-moz-border-radius: 5px;border-radius: 5px;" id="toggler">Intel-site &lt;3</div><div id="botlinks" style="position: absolute; left: 50%; margin-top: 0px; top: 16px; z-index: 1; border-radius: 5px; margin-left: -28.5px; display: none;" class="good message"><span onclick="openkdsite();">KD-site</span></div><div id="botupdate" style="position: absolute; left: 50%; margin-left: -7px; margin-top: 0px; top: 16px; z-index: 1; border-radius: 5px; display: none;" class="1709005572968 good message"></div><style type="text/css">#overlay { float:left; margin-top:-10px; margin-left: 2px; margin-right: auto;width:696px; color:#000; background-color: #fff; filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9; z-index: 10000;text-align:left }</style><style type="text/css">#ircchat { width: 100%;padding: 5px;margin-left: 10px;color:#000; background-color: #fff; z-index2: 10000;text-align:left }</style><form target="_blank" action="https://intel.utopia-game.com/" method="post" id="kdsitelogin"><input type="hidden" name="pwd" value="L1lEXf6oAtFfqXxiit1mXXahOKvNTH9PV6g9eo3IPLUSPLUSPLUSJIzZKL3xprq/fZdNfr5H/BG"></form></body></html>
+      <div style="display:none" id="report-this-label">Report this</div>
+      <div style="display:none" id="report-this-url">/shared/feedback/report_content/</div>
+      <div id="munkbot_secret" api="L1lEXf6oAtFfqXxiit1mXXahOKvNTH9PV6g9eo3I+JIzZKL3xprq/fZdNfr5H/BG"></div>
+      <div id="recruitment-chat">
+      </div>
+      <iframe name="__tcfapiLocator" style="display: none;" src="/assets/saved_resource.html"></iframe><script src="/assets/stable.js"></script>
+      <div style="position:absolute;left:50%;margin-left:-100px;margin-top:0px;top:0px;width:200px; z-index:1;height:20;background-color:grey;font-size:10px;text-align: center;cursor:pointer;-moz-border-radius: 5px;border-radius: 5px;" id="toggler">Intel-site &lt;3</div>
+      <div id="botlinks" style="position: absolute; left: 50%; margin-top: 0px; top: 16px; z-index: 1; border-radius: 5px; margin-left: -28.5px; display: none;" class="good message"><span onclick="openkdsite();">KD-site</span></div>
+      <div id="botupdate" style="position: absolute; left: 50%; margin-left: -7px; margin-top: 0px; top: 16px; z-index: 1; border-radius: 5px; display: none;" class="1709005572968 good message"></div>
+      <style type="text/css">#overlay { float:left; margin-top:-10px; margin-left: 2px; margin-right: auto;width:696px; color:#000; background-color: #fff; filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9; z-index: 10000;text-align:left }</style>
+      <style type="text/css">#ircchat { width: 100%;padding: 5px;margin-left: 10px;color:#000; background-color: #fff; z-index2: 10000;text-align:left }</style>
+      <form target="_blank" action="https://intel.utopia-game.com/" method="post" id="kdsitelogin"><input type="hidden" name="pwd" value="L1lEXf6oAtFfqXxiit1mXXahOKvNTH9PV6g9eo3IPLUSPLUSPLUSJIzZKL3xprq/fZdNfr5H/BG"></form>
+   </body>
+</html>
