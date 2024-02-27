@@ -1,0 +1,1113 @@
+
+/*
+FOLLOW THIS FORMAT:
+
+.my-first-selector,
+.my-second-selector {
+    - positioning and size
+    - border styling
+    - internal styling - padding etc.
+    - typography
+    - colors
+    - display, opacity and special effects
+}
+*/
+
+
+
+
+
+
+body {
+    color: #FFFFFE;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background-color: black;
+}
+
+#header-logo {
+    background: url(./images/logo_header.png) no-repeat top left;
+    width: 183px;
+    height: 50px;
+    position: absolute;
+}
+
+.navigation {
+
+    /* border styling */
+    border: 2px solid;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    /* internal styling - padding etc. */
+
+     /* typography */
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+
+    /* colors */
+    border-color: #103041;
+}
+
+.navigation_underline {
+    text-decoration: underline !important;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: silver;
+}
+
+.navigation a:hover  {
+    /* colors */
+    color: white;
+}
+
+.chooser-nav-class {
+
+    /* border styling */
+    border: 2px solid;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    /* internal styling - padding etc. */
+
+     /* typography */
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+
+    /* colors */
+    border-color: #103041;
+}
+
+.chooser-nav-class a {
+    text-decoration: none;
+    color: silver;
+}
+
+.chooser-nav-class a:hover  {
+    /* colors */
+    color: white;
+}
+
+#header-navigation div {
+
+}
+
+#header-navigation div:hover a  {
+    /* colors */
+    color: white;
+    text-decoration: none;
+}
+
+#header-navigation div:hover {
+    /* colors */
+    background: #103041;
+
+    /* display, opacity and special effects */
+    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000, 0px -8px 8px -6px #fff;
+}
+
+#header-navigation-2nd-level div:hover a  {
+    /* colors */
+    color: white;
+    text-decoration: none;
+}
+
+#header-navigation-2nd-level div:hover {
+    /* colors */
+    background: #103041;
+
+    /* display, opacity and special effects */
+    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000, 0px -8px 8px -6px #fff;
+}
+
+#header-navigation-3rd-level div:hover a  {
+    /* colors */
+    color: white;
+    text-decoration: none;
+}
+
+#header-navigation-3rd-level div:hover {
+    /* colors */
+    background: #103041;
+
+    /* display, opacity and special effects */
+    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000, 0px -8px 8px -6px #fff;
+}
+
+#chooser-nav div:hover a  {
+    /* colors */
+    color: white;
+    text-decoration: none;
+}
+
+#chooser-nav div:hover {
+    /* colors */
+    background: #103041;
+
+    /* display, opacity and special effects */
+    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 4px #7c4a14, 0px 8px 10px -6px #fff;;
+    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000, 0px -8px 8px -6px #fff;
+}
+
+#account-container {
+    font-size: 16px;
+}
+
+#account-header .account-image {
+    background: url(./images/anonymous_small.png) no-repeat top left;
+}
+
+#account-header {
+}
+
+#account-header:hover
+{
+    background-color: #103041;
+}
+
+#account-header.selected
+{
+    background-color: #103041;
+}
+
+#account-details
+{
+    font-size: 12px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    line-height: 16px;
+    background-color: black;
+}
+
+#account-details .account-title
+{
+    font-size: 16px;
+    font-weight: bolder;
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
+}
+
+#account-details .alert a {
+    color: #ff771c;
+}
+
+#account-details a:hover {
+    box-shadow: -10px 0px 6px -6px #fff;
+}
+
+#account-details .account-summary {
+    /* internal styling - padding etc. */
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
+}
+
+#account-details .account-signout
+{
+    border-top: 1px solid #103041;
+    -moz-box-shadow: inset 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: inset 0px 2px 1px -1px #103041;
+    box-shadow: inset 0px 2px 1px -1px #103041;
+    font-weight: bold;
+    text-align: right;
+}
+
+#middle {
+    /* positioning and size */
+    /* border styling */
+    /* internal styling - padding etc. */
+    background-image: url(./images/bk.jpg);
+    background-repeat: no-repeat;
+    background-position: center 200px;
+    /* typography */
+    /* colors */
+    /* display, opacity and special effects */
+}
+
+a {
+    color: #45ACF6;
+    text-decoration: none;
+}
+
+a.highlighted {
+    color: #E68910;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    color: silver;
+    font-weight: normal;
+}
+
+#footer {
+    color: #4d5355;
+    font-size: 10px;
+}
+
+.report-this {
+    color: #45ACF6;
+    background-color: #18100e;
+    border-bottom-left-radius: 8px 8px;
+    -moz-border-radius-bottomleft: 8px 8px;
+
+    -moz-box-shadow: 0px 3px 4px #000;
+    -webkit-box-shadow: 0px 3px 4px #000;
+    box-shadow: 0px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000');
+}
+
+.report-this:hover {
+    color: #7fc3f3;
+    background-color: #2a201d;
+}
+
+.reported-content {
+    border: 2px inset #616161;
+    background-color: #000000;
+}
+
+.overlay
+{
+    background-color: #2f2e2e;
+    border:1px solid #666;
+    box-shadow:0 0 90px 5px #000;
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+
+.overlay .close
+{
+    background-image:url("./images/overlay-close.png");
+}
+
+.age-changes,
+.lobby-panel,
+.campaigns {
+    /* border styling */
+    border: 2px solid;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+
+    /* internal styling - padding etc. */
+
+    /* typography */
+
+    /* colors */
+    border-color: #555555;
+    -moz-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
+    -webkit-box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
+    box-shadow: 1px -1px 2px 0px #fffbf1, inset 0px 0px 6px #000;
+
+}
+
+.lobby-panel h1 {
+    font-size: 25px;
+    line-height: 25px;
+    color: #0361CC;
+}
+.lobby-panel h1 a {
+    color: #0361CC;
+}
+
+.lobby-panel h1 a:hover {
+
+}
+
+.divider {
+    background-image: url(./images/divider.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.divider-small {
+    background-image: url(./images/divider-small.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.lobby-panel table th {
+    font-size: 14px;
+}
+
+.lobby-panel table td {
+    font-size: 12px;
+}
+
+.lobby-panel h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.age-changes h3,
+.campaigns h3 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.recruitment-campaigns h1,
+.race-changes h1,
+.trait-changes h1 {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.race-changes h2,
+.trait-changes h2 {
+    font-size: 25px;
+}
+
+.campaigns .basic-details .campaign-summary h2{
+    font-size: 14px;
+}
+
+.campaigns .basic-details .campaign-summary .highlight-keyword{
+    font-size: 18px;
+}
+
+.good {
+    color: #90ee90;
+}
+.bad {
+    color: red;
+}
+
+.duration_operation{
+    color: #FDE89A;
+}
+
+.message {
+    /* positioning and size */
+    border: 1px solid white;
+
+    /* internal styling - padding etc. */
+    /* typography */
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.good.message
+{
+    /* colors */
+    background-color: green;
+    color: white;
+}
+
+.bad.message
+{
+    background-color: #400000;
+    color: white;
+}
+
+.info.message
+{
+    background-color: #C46500;
+    color: white;
+}
+
+
+
+/* User profile page
+-------------------------------------------------------------- */
+.lobby-panel .statement {
+    background: url('./images/province_profile/scroll.png') no-repeat;
+}
+
+.lobby-panel .statement h2 {
+    line-height: 16px;
+}
+
+.advice-message {
+    color: #F93;
+}
+
+.warning {
+    color: #e55700;
+}
+
+.error {
+    color: #e55700;
+}
+
+#game-navigation .current-date {
+    margin-top: 5px;
+    padding: 15px 0px;
+    font-size: 13px;
+
+    /* border styling */
+    border: 2px solid;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    border-color: #103041;
+
+    background: #222526;
+}
+
+#game-navigation a {
+    line-height: 0.6em;
+}
+
+#game-navigation a:hover {
+    box-shadow: -10px 0px 6px -6px #fff;
+}
+
+#resource-bar
+{
+    /* border styling */
+    border-collapse: separate;
+    border-spacing: 3px 3px;
+
+    /* internal styling - padding etc. */
+    padding: 3px 6px 3px 6px;
+
+    /* colors */
+}
+
+#resource-bar thead {
+}
+
+#resource-bar thead th {
+    /* internal styling - padding etc. */
+    padding: 3px 6px 3px 6px;
+
+    font-weight: normal;
+    color: #fff;
+}
+
+#resource-bar tbody th,
+#resource-bar tbody td{
+
+    padding: 3px 6px 3px 6px;
+
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    text-align: right;
+    color: #fff;
+}
+
+#resource-bar tbody th {
+    background-color: #400000;
+}
+
+#resource-bar tbody td {
+    background-color: #1A1A1A;
+}
+
+#resource-bar thead th {
+    background-color: #400000;
+}
+
+
+#resource-bar .positive {
+    color: green;
+}
+
+#resource-bar .negative {
+    color: red;
+}
+
+.game-content form,
+.game-content h2 {
+    /* internal styling - padding etc. */
+
+    /* colors */
+    color: #fff;
+}
+
+.game-content h2 {
+    /* colors */
+    background-color: #000040;
+}
+
+.game-content h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.game-content form {
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+form ul.errorlist {
+    color: red;
+}
+
+.game-content form.change-kingdom {
+    /* typography */
+    font-size: 14px;
+
+    background-color: #400000;
+}
+
+.game-content form.change-kingdom .change-kingdom-heading {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.game-content form.change-kingdom .change-kingdom-nav a {
+    width: 80px;
+}
+
+.game-content form.change-kingdom #royal-commands {
+    border-top: 2px dotted #3B4041;
+}
+
+.game-content form.change-kingdom #royal-commands table tbody td {
+    font-weight: normal;
+}
+
+.game-content form.change-kingdom .change-kingdom-form {
+    width: 210px;
+    font-size: 20px;
+    color: #a9a9a9;
+}
+
+.game-content form.change-kingdom.change-kingdom-target {
+    border-top: 2px solid;
+    border-color: #555;
+}
+
+form textarea,
+form input[type=text],
+form input[type=number],
+form input[type=password] {
+    border-width: 1px;
+    border-color: #d7d7d7;
+    padding-left: 3px;
+    font-size: 12px;
+    text-align: left;
+
+    color: #000;
+    background: #fff;
+}
+
+form input[type=text],
+form input[type=number],
+form input[type=password] {
+    height: 16px;
+    font-size: 12px;
+}
+
+form .errorlist {
+    font-size: 12px;
+}
+
+form input[type=submit],
+.button-link { 
+    /* positioning and size */
+    border: 1px solid;
+    padding: 3px 3px 3px 3px;
+
+    /* border styling */
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    /* internal styling - padding etc. */
+    /* typography */
+    font-size: 16px;
+    font-weight: normal;
+
+    /* colors */
+    background-color: #D8D8D8;
+
+    color: #000;
+}
+
+form input[type=submit]:hover,
+.button-link:hover {
+    /* colors */
+    background-color: #F2F2F2;
+    text-decoration: none;
+}
+
+form input[type=submit]:active,
+.button-link:active {
+    /* colors */
+    background-color: #F2F2F2;
+}
+
+div.selector span,
+div.uploader span.filename,
+div.uploader span.action
+{
+    padding-left: 5px;
+    /* typography */
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+}
+div.uploader span.filename,
+div.uploader span.action
+{
+    font-size: 12px;
+}
+
+div.uploader span.action {
+    background: transparent;
+    color: #000;
+}
+
+.game-content form table {
+    margin-bottom: 10px;
+
+    text-align: left;
+}
+
+.game-content form table thead th {
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+.game-content form tbody th {
+}
+
+.game-content form tbody th:first-child {
+    border-left: none;
+}
+
+.game-content form tbody td {
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.game-content form tbody tr {
+    border: none;
+}
+.game-content form tbody tr:nth-child(even) {
+    /* display, opacity and special effects*/
+    background: rgb(48, 48, 48);
+    background: rgba(48, 48, 48, 0.6);
+}
+
+/* KINGDOM NEWS */
+
+.news-legend span.news-aid:before {
+    content: url(./images/kingdom_news/aid_inline.png);
+}
+.news-legend span.news-intra-kingdom-conflict:before {
+    content: url(./images/kingdom_news/intra_kingdom_conflict_inline.png);
+}
+.news-legend span.news-actions-against-our-kingdom:before {
+    content: url(./images/kingdom_news/actions_against_our_kingdom_inline.png);
+}
+.news-legend span.news-actions-by-our-kingdom:before {
+    content: url(./images/kingdom_news/actions_by_our_kingdom_inline.png);
+}
+.news-legend span.news-dragon:before {
+    content: url(./images/kingdom_news/dragon_inline.png);
+}
+.news-legend span.news-obituaries:before {
+    content: url(./images/kingdom_news/obituaries_inline.png);
+}
+.news-legend span.news-relations:before {
+    content: url(./images/kingdom_news/relations_inline.png);
+}
+.news-province-modification:before {
+    content: url(./images/kingdom_news/province_modification_inline.png);
+}
+.news-legend span.news-ritual:before {
+    content: url(./images/kingdom_news/ritual_inline.png);
+}
+
+
+td.news-aid {
+    background-image: url(./images/kingdom_news/aid.png);
+}
+td.news-intra-kingdom-conflict {
+    background-image: url(./images/kingdom_news/intra_kingdom_conflict.png);
+}
+td.news-actions-against-our-kingdom {
+    background-image: url(./images/kingdom_news/actions_against_our_kingdom.png);
+}
+td.news-actions-by-our-kingdom {
+    background-image: url(./images/kingdom_news/actions_by_our_kingdom.png);
+}
+td.news-dragon {
+    background-image: url(./images/kingdom_news/dragon.png);
+}
+td.news-obituaries {
+    background-image: url(./images/kingdom_news/obituaries.png);
+}
+td.news-relations {
+    background-image: url(./images/kingdom_news/relations.png);
+}
+td.news-province-modification {
+    background-image: url(./images/kingdom_news/province_modification.png);
+}
+td.news-ritual {
+    background-image: url(./images/kingdom_news/ritual.png);
+}
+
+/* KINGDOM DETAILS */
+.unused-slot { color: #B0B0B0; }
+.protected,
+.intel-fresh { color: #99ffbb; }
+.monarch,
+.at-war,
+.intel-rotten { color: #F28585; }
+.chamberlain,
+.intel-stale { color: #FFC583; }
+.you { font-weight: bold; }
+.slot-number { font-size: 0.8em; color: #B0B0B0; }
+
+.provinces-legend {
+    font-size: 0.8em;
+}
+
+.provinces-legend .invitations {
+    font-size: 1.2em;
+}
+
+.dip-status
+{
+    color: #000;
+}
+
+.dip-status-NORMAL
+{
+    background-color: #01DF01;
+}
+
+.dip-status-UNFRIENDLY
+{
+    background-color: #FFBF00;
+}
+
+.dip-status-HOSTILE
+{
+    background-color:#FF4000;
+    background-image: url(./images/hostile_meter/hostile_gradient.png);
+    background-repeat:repeat-y;
+}
+
+.dip-status-WAR
+{
+    background-color: #FF0000;
+}
+
+.own-meter-value
+{
+    background-image: url(./images/hostile_meter/up.png);
+}
+
+.their-meter-value
+{
+    background-image: url(./images/hostile_meter/down.png);
+}
+
+.war-button-meter-value
+{
+    background-image: url(./images/hostile_meter/war.png);
+}
+
+#hostility-meter-example {
+    background-image: url(./images/hostile_meter/example.png);
+}
+
+#id_taunt_top_image {
+    color: white;
+}
+
+/* Province profile page
+-------------------------------------------------------------- */
+
+.province-flag .flagpole {
+    background: url('./images/province_profile/flagpole.png') no-repeat;
+}
+
+.province-flag .flag-image .default-flag{
+    background: url('./images/province_profile/default_flag.png') no-repeat;
+}
+
+.motto {
+    background: url('./images/province_profile/scroll.png') no-repeat;
+}
+
+
+.game-header
+{
+    height: 25px;
+}
+
+.game-header h1
+{
+    height: 20px;
+    margin: 0px 2px;
+    padding: 6px 6px 1px 6px;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    -moz-box-shadow: -1px -1px 1px 1px #788183;
+    -webkit-box-shadow: -1px -1px 1px 1px #788183;
+    box-shadow: -1px -1px 1px 1px #788183;
+
+    background: #3B4041; /* Old browsers */
+
+    color: #fff;
+}
+
+.game-header a h1 {
+    color: silver;
+    background: #222526; /* Old browsers */
+}
+
+.game-header a:hover {
+    text-decoration: none;
+}
+
+.game-header a h1:hover
+{
+    background: #3B4041; /* Old browsers */
+
+    color: #fff;
+
+    -moz-box-shadow: -1px -1px 1px 1px #B5B9BA;
+    -webkit-box-shadow: -1px -1px 1px 1px #B5B9BA;
+    box-shadow: -1px -1px 1px 1px #B5B9BA;
+}
+
+.game-content {
+    border: 2px solid;
+
+    /* border styling */
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    /* colors */
+    border-color: #3B4041;
+}
+
+.game-content h2 {
+    margin-top: 15px;
+
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.game-content thead th {
+    font-weight: normal;
+    font-size: 12px;
+    color : #fff;
+    background-color: #000040;
+}
+
+.game-content tbody th {
+    color: silver;
+}
+
+.game-content tbody th:first-child {
+    border-left: none;
+}
+
+.game-content tbody td {
+    padding-right: 20px;
+}
+
+.game-content tbody td.forum-moderator-buttons {
+    padding-right: 10px;
+}
+
+.game-content tbody tr {
+}
+
+.game-content tbody tr:nth-child(even) {
+    /* display, opacity and special effects*/
+    background: rgb(48, 48, 48);
+    background: rgba(48, 48, 48, 0.6);
+}
+
+.game-content tbody tr.sub-total {
+    background: none;
+}
+.game-content tr.sub-total td
+{
+    border-top: 2px solid #B9B9B9;
+    padding-bottom: 25px;
+}
+
+.game-content table.schedule
+{
+    font-size:0.8em;
+    border-collapse: separate;
+    border-spacing: 3px 3px;
+}
+
+.two-digit-input {
+    width: 30px;
+}
+.three-digit-input {
+    width: 40px;
+}
+
+.four-digit-input {
+    width: 50px;
+}
+
+.five-digit-input {
+    width: 60px;
+}
+
+.six-digit-input {
+    width: 70px;
+}
+
+/* GAME PREFERENCES */
+.game-content div.preference-box {
+    background-color: #400000;
+}
+
+.game-content div.preference-box.disabled {
+    background-color: #444;
+}
+
+div.wysiwyg {
+    border: 1px solid #999;
+    padding: 5px;
+    background: rgb(83, 83, 83);
+}
+
+div.wysiwyg ul.toolbar li {
+    background: url('./images/jquery.wysiwyg.gif') no-repeat -64px -80px;
+    border: 1px outset #83817d;
+}
+
+body.wysiwyg {
+    color: #fff;
+    background: #2B3849; /* Old browsers */
+    font-size: 12px;
+}
+
+#bookmark-header {
+    background-image: url(./images/silver_star.png);
+    background-repeat: no-repeat;
+    background-position: center 3px;
+}
+
+#bookmark-header:hover,
+#bookmark-header.selected
+{
+    background-color: #103041;
+}
+
+#bookmark-details
+{
+    font-size: 12px;
+    background-color: black;
+}
+
+#bookmark-details a
+{
+    text-decoration: none;
+}
+
+#bookmark-details #bookmarks {
+    border-top: 1px solid #103041;
+    border-bottom: 1px solid #103041;
+    -moz-box-shadow: 0px 2px 1px -1px #103041;
+    -webkit-box-shadow: 0px 2px 1px -1px #103041;
+    box-shadow: 0px 2px 1px -1px #103041;
+}
+
+#royal-command-icon {
+    background-image: url(./images/silver_crown.png);
+    background-repeat: no-repeat;
+    background-position: center 3px;
+}
+
+#royal-command-icon:hover {
+    background-color: #103041;
+}
+
+.tablesorter th .order-icon {
+    background-image: url(./images/order_none.png);
+}
+
+.tablesorter th.headerSortUp .order-icon {
+    background-image: url(./images/order_asc.png);
+}
+
+.tablesorter th.headerSortDown .order-icon {
+    background-image: url(./images/order_desc.png);
+}
+
+.campaign-meter-level div {
+    border: 1px solid green;
+}
+
+.campaign-meter-level div.full {
+    background-color: green;
+}
+
+.campaign-meter-level div.unknown {
+    color: green;
+}
+
+.fails-criteria div {
+    border: 1px solid red;
+}
+
+.fails-criteria div.full {
+    background-color: red;
+}
+
+.two-column ul {
+   margin-left: 0px;
+}
+
+.two-column li {
+    margin-right: 10px;
+}
+
+.recruitment-header h2 {
+    font-size: 16px;
+}
+
+.recruitment-header .rank-bar,
+.campaigns .rank-bar {
+    background-color: #04B404;
+}
+
+.recruitment-header .selected-rank,
+.campaigns .selected-rank {
+    background-color: #40FF00;
+}
+
+.campaigns .campaign-message-intro {
+    font-size: 14px;
+}
+

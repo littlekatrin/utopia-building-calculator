@@ -1,0 +1,1365 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0px;
+    text-align: left;
+}
+
+#outer-container {
+    height: 100%;
+    width: 100%;
+}
+
+#inner-container {
+    display: block;
+    position: relative;
+    width: 1130px;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#header {
+    width:960px;
+    /*height: 50px;*/
+    height: 85px;
+}
+
+#header2 {
+    width:960px;
+    /*height: 50px;*/
+    height: 125px;
+}
+
+#middle {
+    overflow: hidden;
+}
+
+#left-column {
+    float: left;
+    width: 830px;
+}
+
+#left-column.unauthenticated {
+    width: 600px;
+}
+
+#right-column {
+    float: right;
+}
+
+#footer {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    clear: both;
+}
+
+#leaderboard-ad {
+    width: 750px;
+    height: 90px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#skyscraper-ad {
+    width: 300px;
+    height: 650px;
+    padding-top: 110px;
+}
+
+#ad-words {
+    width: 830px;
+    height: 90px;
+    padding: 5px;
+    text-align: center;
+    clear: both;
+}
+
+#ad-words div.bsap{
+    margin: 0 auto;
+    width: 750px;
+}
+
+#social-login {
+    width: 205px;
+    display: inline-block !important;
+    padding: 10px;
+}
+.g-signin2 {
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+.myfb_button {
+   /* background: url("//static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png") no-repeat scroll 0 0 #29447E;*/
+    cursor: pointer;
+    display: inline-block;
+    outline: medium none;
+    padding: 0 0 0 1px;
+    text-decoration: none;
+}
+
+/* STYLING OF THE TOP NAVIGATION */
+
+
+.navigation {
+    /* positioning and size */
+    padding: 6px;
+}
+
+#header-navigation {
+    position: relative;
+    /*width: 515px;*/
+    left: 270px;
+    top: 10px;
+}
+
+#header-navigation div {
+    float: left;
+    margin: 0px 6px 0px 0px;
+    cursor: pointer;
+}
+#header-navigation-2nd-level {
+    position: relative;
+    width: 560px;
+    left: 270px;
+    top: 10px;
+    
+}
+#header-navigation-2nd-level div {
+    float: left;
+    margin: 7px 5px 0px 0px;
+    cursor: pointer;
+}
+#header-navigation-3rd-level {
+    position: relative;
+    width: 560px;
+    left: 270px;
+    top: 10px;
+    
+    
+}
+#header-navigation-3rd-level div {
+    float: left;
+    margin: 7px 5px 0px 0px;
+    cursor: pointer;
+}
+
+/* STYLING OF THE ACCOUNT OPTIONS SECTION. */
+
+#account-container
+{
+    position: relative;
+    right: 0px;
+    top: 10px;
+}
+
+#account-header
+{
+    height: 25px;
+    margin: 0px;
+    text-align: left;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 3px;
+    font-weight: normal;
+}
+
+#account-header .account-image
+{
+    float: left;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#account-header div
+{
+    float: left;
+}
+
+#account-header .down-arrow {
+    position: relative;
+    top: 17px;
+    left: -8px;
+    border-style: solid dashed dashed;
+    border-color: transparent;
+    border-top-color: #edf2fd;
+    display: -moz-inline-box;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    border-width: 4px 4px 0;
+    padding-top: 1px;
+}
+
+#account-details
+{
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    padding: 5px;
+    font-size: 12px;
+    display: none;
+    z-index: 100;
+}
+
+#account-details a
+{
+    text-decoration: none;
+}
+
+#account-details .account-title
+{
+    padding: 5px;
+    clear: both;
+    margin-bottom: 4px;
+}
+
+#account-details .account-summary {
+    margin-bottom: 4px;
+}
+
+#account-details .account-signout
+{
+    padding: 5px;
+    clear: both;
+    margin-top: 4px;
+}
+
+#account-details .account-signout a
+{
+    text-decoration: none;
+}
+
+#content-area {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#footer {
+    width: 960px;
+    margin-top: 20px;
+}
+
+/*
+    THE FOLLOWING ELEMENTS ARE COMMON TO ALL THEMES, AND HAVE THEREFORE BEEN EXTRACTED HERE
+*/
+
+.inline-block-class {
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1; /* for IE */
+    *display:inline; /* for IE */
+
+    vertical-align: top;
+}
+
+.reportable {
+    position: relative;
+    display: inline-block;
+}
+
+.report-this {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 3px;
+
+    font-size: xx-small;
+    cursor: pointer;
+    display: none;
+}
+
+.reported-content {
+    padding: 5px;
+    margin: 10px;
+    height:150px;
+    overflow:auto;
+}
+
+
+.overlay
+{
+    display:none;
+    z-index:9999;
+
+    padding: 10px;
+    width:755px;
+    min-height:200px;
+}
+
+.overlay .close
+{
+    position:absolute;
+    right:-15px;
+    top:-15px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+    z-index:10000;
+}
+
+.age-changes,
+.lobby-panel,
+.campaigns {
+    /* positioning and size */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 16px 16px 16px 16px;
+
+    /* internal styling - padding etc. */
+
+    /* typography */
+    font-weight: normal;
+    text-align: center;
+}
+
+.lobby-panel table {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.divider {
+    margin: 10px auto 10px auto;
+    height: 33px;
+    width: 60px;
+}
+
+.divider-small {
+    margin: 3px auto 3px auto;
+    height: 16px;
+    width: 29px;
+}
+
+.lobby-panel table th,
+.lobby-panel table td {
+    padding: 6px;
+}
+
+.age-changes {
+    width: 340px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.age-changes:nth-child(even){
+    clear: both;
+}
+
+.age-changes h2 {
+    text-align: center;
+}
+
+.age-changes h3 {
+    margin-top: 10px;
+}
+
+.age-changes table,
+.campaigns table {
+    width: 100%;
+}
+
+.race-changes h1,
+.trait-changes h1 {
+    clear: both;
+}
+
+
+.message {
+    /* positioning and size */
+    margin: 20px;
+    padding: 8px;
+
+    text-align: left;
+
+    /* internal styling - padding etc. */
+    /* typography */
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.lobby-panel .avatar {
+    float: left;
+}
+
+#default-avatar {
+    background: url(../images/default_avatar.png) no-repeat top left;
+    width: 190px;
+    height: 210px;
+}
+
+.lobby-panel .statement {
+    height: 70px;
+    width: 215px;
+    padding: 10px 25px 5px 10px;
+    text-align: left;
+}
+
+
+#game-navigation {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+}
+
+#game-navigation .current-date {
+    margin-bottom: 10px;
+}
+
+#game-navigation .navigation {
+    margin-bottom: 10px;
+}
+
+#game-navigation .navigation div {
+    margin-bottom: 3px;
+}
+
+
+#resource-bar
+{
+    /* positioning and size */
+    width: 700px;
+    margin-bottom: 10px;
+
+    /* typography */
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    margin-left: 60px;
+    list-style: disc;
+}
+
+.game-content form,
+.game-content h2 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+
+.game-content h3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+form ul.errorlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+form table .errorlist {
+    display: block;
+}
+
+.game-content form h2 {
+    margin-top: 0px;
+}
+
+.game-content form.change-kingdom {
+    position: relative;
+    text-align: left;
+}
+
+.game-content form.change-kingdom .change-kingdom-heading {
+    margin-left: 4px;
+    margin-top: 10px;
+    width: 420px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.game-content form.change-kingdom .change-kingdom-nav {
+    margin: 5px 0 4px 4px;
+    display: inline-block;
+}
+
+.game-content form.change-kingdom .change-kingdom-nav a {
+    display: inline-block;
+    width: 60px;
+
+    padding: 3px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.game-content form.change-kingdom #royal-commands {
+    padding: 5px 0px;
+}
+
+.game-content form.change-kingdom #royal-commands .kingdom-label {
+    display: inline-block;
+    width: 150px;
+}
+
+.game-content form.change-kingdom #royal-commands .edit-instruction {
+    width: 280px;
+}
+
+.game-content form.change-kingdom #royal-commands .instruction {
+    display: inline-block;
+    width: 400px;
+}
+
+.game-content form.change-kingdom #royal-commands table {
+    margin-bottom: 0px;
+}
+
+.game-content form.change-kingdom .change-kingdom-form {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 260px;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+    font-weight: lighter;
+    vertical-align: middle;
+}
+
+#change-kingdom-button {
+    display: inline-block;
+    height: 41px;
+    width: 60px;
+    margin: 4px 4px 0px 0px;
+    text-align: center;
+}
+
+.game-content form.change-kingdom.change-kingdom-target .change-kingdom-form {
+    top: 4px;
+    vertical-align: middle;
+}
+
+.game-content form.change-kingdom.change-kingdom-target #change-kingdom-button {
+    position: relative;
+    top: -3px;
+    right: -3px;
+    height: 30px;
+}
+
+form input[type=text],
+form input[type=number],
+form input[type=password] {
+    display: inline-block;
+    text-align: center;
+}
+
+form .errorlist {
+    display: inline-block;
+}
+
+form input[type=submit],
+.button-link {
+    /* positioning and size */
+    padding: 3px 3px 3px 3px;
+    
+    /* internal styling - padding etc. */
+    /* typography */
+    text-align: left;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form input[type=submit]{
+    margin-bottom: 10px;
+}
+
+form input[type=submit]:disabled {
+    opacity: 0.5;
+}
+
+form p {
+    text-align: center;
+}
+
+form ul {
+    list-style-image: none;
+}
+form ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+
+/* NEWS */
+.next-prev-nav {
+    position: relative;
+    text-align: center;
+}
+.next-prev-nav .previous {
+    position: absolute;
+    left: 0px;
+}
+.next-prev-nav .next {
+    position: absolute;
+    right: 0px;
+}
+
+/* KINGDOM NEWS */
+.news-legend {
+    margin-top: 10px;
+}
+
+.news-legend span {
+    margin-left: 20px;
+    font-size: 0.8em;
+    white-space:nowrap;
+}
+.news-legend span:first-child {
+    margin-left: 0px;
+}
+
+.news-incident-type {
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    padding-right: 0px;
+    background-position: 5px 5px;
+
+}
+.news-incident-date {
+    width: 120px;
+}
+
+.provinces-legend span {
+    margin-left: 10px;
+}
+
+.provinces-legend .invitations {
+    float: right;
+}
+
+.game-content .kingdom-details-scaled-taunt {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-content .kingdom-details-scaled-taunt p {
+    text-align: center;
+}
+
+.game-content .kingdom-details-scaled-taunt img {
+    width: 600px;
+    height: 75px;
+}
+
+.meter-container
+{
+    position: relative;
+    height: 30px;
+    width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.dip-status
+{
+    height: 14px;
+    position: absolute;
+    /* allow some margin-left so that the pointers align with 0 on the meter */
+    margin-left: 7px;
+    font-size: 10px;
+    text-align: center;
+    top: 10px;
+}
+
+.dip-status-WAR
+{
+    margin-left: 10px;
+}
+
+.meter-value
+{
+    position: absolute;
+    height: 15px;
+    background-repeat: no-repeat;
+    font-size: 10px;
+    width: 45px;
+    padding-left: 17px;
+}
+
+.own-meter-value
+{
+    bottom: -9px;
+    padding-top: 2px;
+}
+
+.their-meter-value
+{
+    top: -4px;
+    padding-bottom: 2px;
+}
+
+#hostility-meter-example {
+    height: 44px;
+    width: 427px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.province-flag {
+    margin: 20px auto 20px auto;
+}
+
+.province-flag .flag {
+    position: relative;
+    margin: 10px auto 10px auto;
+    width: 200px;
+    height: 146px;
+}
+
+
+.province-flag .flagpole {
+    position: absolute;
+    left: 0px;
+    height: 146px;
+    width: 18px;
+}
+
+.province-flag .flag-image {
+    position: absolute;
+    left: 8px;
+    width:200px;
+    height:100px;
+    top: 22px;
+    text-align: center;
+}
+
+.province-flag .flag-image .default-flag{
+    width:200px;
+    height:100px;
+}
+
+.motto {
+    height: 70px;
+    width: 215px;
+    padding: 10px 25px 5px 10px;
+    text-align: left;
+}
+
+.motto h3 {
+    margin: 0px;
+}
+
+.game-header
+{
+    float: left;
+    width: 700px;
+}
+
+
+.game-header h1
+{
+    display: block;
+    float: left;
+}
+
+
+.game-content {
+    float: left;
+    width: 694px;
+    padding: 1px 1px 1px 1px;
+}
+
+.game-content h2:first-child {
+    margin-top: 0px;
+}
+
+.game-content p {
+    margin: 10px 10px 10px 20px;
+    text-align: left;
+}
+
+.page-summary {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.game-content table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.game-content th,
+.game-content td {
+    padding: 4px 10px 4px 5px;
+}
+
+
+.game-content table.one-column-stats th {
+    width: 50%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.game-content table.one-column-stats td {
+    width: 50%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.game-content table.two-column-stats th {
+    width: 30%;
+    text-align: right;
+}
+
+.game-content table.two-column-stats td {
+    width: 20%;
+    text-align: left;
+}
+
+.game-content table.three-column-stats th {
+    width: 20%;
+    text-align: right;
+}
+
+.game-content table.three-column-stats td {
+    width: 13%;
+    text-align: left;
+}
+
+.game-content table.schedule td {
+    padding: 0px;
+    text-align: center;
+}
+.game-content table.schedule thead th {
+    padding: 0px;
+    width: 25px;
+    text-align: center;
+}
+.game-content table.schedule tbody th {
+    width: 80px;
+}
+
+
+.game-content table.math-table tbody th {
+    text-align: right;
+}
+.game-content table.math-table thead th,
+.game-content table.math-table tbody td {
+    text-align: left;
+}
+
+.game-content div.preference-box {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.game-content table.mail-view {
+    width: 694px;
+    margin-bottom: 0px;
+}
+
+.game-content table.mail-view th {
+    text-align: right;
+}
+
+.game-content table.mail-view td {
+    text-align: left;
+}
+
+.game-content table.mail-view tr td {
+    position: relative;
+}
+
+.game-content table.mail-view tr td:nth-child(odd) {
+    width: 150px;
+}
+
+.game-content table.mail-view tr th {
+    text-align: left;
+}
+
+.game-content table.mail-view form {
+    display: inline-block;
+    width: auto;
+    height: 23px;
+    background: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+}
+
+.game-content table.mail-view input[type="text"] {
+    text-align: left;
+}
+
+.game-content form.forum-delete-button input[type="submit"] {
+    display: block;
+}
+
+div.wysiwyg ul.toolbar {
+    width: auto;
+}
+
+#bookmark-container
+{
+    margin-top: 5px;
+    position: relative;
+    float: left;
+}
+
+#bookmark-header
+{
+    height: 30px;
+    width: 26px;
+    margin: 0px;
+    text-align: left;
+    top: 0px;
+    position: absolute;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+#bookmark-details
+{
+    position: absolute;
+    top: 30px;
+    padding: 5px;
+    display: none;
+    z-index: 100;
+}
+
+#bookmark-details div {
+    white-space: nowrap;
+}
+
+table#throne-royal-commands {
+    text-align: left;
+}
+
+table#throne-royal-commands th {
+    padding-left: 10px;
+}
+
+#royal-command-container {
+    margin-top: 5px;
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 26px;
+}
+
+#royal-command-icon {
+    height: 30px;
+    width: 26px;
+}
+
+.tablesorter th {
+    cursor: pointer;
+    padding: 4px 4px 4px 5px;
+}
+
+.tablesorter th .order-icon {
+    display: inline-block;
+    height: 9px;
+    width: 21px;
+}
+
+ol {
+    list-style: decimal;
+    text-align: left;
+}
+
+.recruitment-header {
+    width: 700px;
+    margin: 0 auto 5px auto;
+    padding: 0px 16px;
+    text-align: left;
+}
+
+.recruitment-header .your-qualifications {
+    text-align: right;
+    width: 299px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.recruitment-header .your-qualifications-graph {
+    width: 200px;
+}
+
+.recruitment-campaigns table {
+    width: 100%;
+}
+
+.recruitment-campaigns table th {
+    width: 130px;
+}
+
+.recruitment-header .your-kingdom-rankings {
+    text-align: right;
+    width: 107px;
+    padding-top: 5px;
+}
+
+.recruitment-header .your-kingdom-rankings-graph {
+    width: 70px;
+    position: relative;
+    height: 50px;
+}
+
+
+.your-kingdom-rankings-graph .rank-bar,
+.your-kingdom-rankings-graph .rank-label {
+    cursor: pointer;
+}
+
+.your-kingdom-rankings-graph .rank-bar,
+.campaign-kingdom-rankings-graph .rank-bar {
+    position: absolute;
+    width: 12px;
+    bottom: 5px;
+}
+
+.your-kingdom-rankings-graph .rank-bar {
+    bottom: 15px;
+}
+
+.your-kingdom-rankings-graph .rank-label {
+    position: absolute;
+    width: 12px;
+    bottom: 0px;
+    text-align: center;
+    font-size: 9px;
+}
+
+.your-kingdom-rankings-graph .net_worth,
+.campaign-kingdom-rankings-graph .net_worth {
+    right: 45px;
+}
+
+.your-kingdom-rankings-graph .land,
+.campaign-kingdom-rankings-graph .land {
+    right: 30px;
+}
+
+.your-kingdom-rankings-graph .honor,
+.campaign-kingdom-rankings-graph .honor {
+    right: 15px;
+}
+
+.your-kingdom-rankings-graph .war_wins,
+.campaign-kingdom-rankings-graph .war_wins {
+    right: 0px;
+}
+
+
+
+.campaigns {
+    width: 700px;
+    text-align: left;
+}
+
+.campaigns h3 {
+    padding-top: 10px;
+}
+
+.campaigns .odd {
+}
+
+.campaigns .even {
+    background: rgba(48, 48, 48, 0.2);
+}
+
+.campaigns .spacer {
+    height: 5px;
+}
+
+.campaigns .basic-details {
+    padding-top: 5px;
+    padding-left: 5px;
+    position: relative;
+}
+
+.campaigns .campaign-id {
+    width: 50px;
+}
+
+.campaigns .campaign-summary {
+    width: 250px;
+    text-align: center;
+}
+
+.campaigns .campaign-requirements {
+    width: 245px;
+}
+
+.campaigns .campaign-kingdom-rankings-graph {
+    width: 140px;
+    height:50px;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+.campaigns .expanded-details {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.campaigns .campaign-message {
+    width: 290px;
+}
+
+.campaigns .ajax-div {
+    width: 380px;
+    text-align: center;
+}
+
+.campaigns .application-message {
+    width: 240px;
+}
+
+.campaigns .application-message textarea {
+    width: 230px;
+    height: 46px;
+}
+
+#campaign-pagination {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.campaign-meter-level div {
+    height: 10px;
+    width: 10px;
+}
+
+.campaign-meter-level div.unknown {
+    background-color: inherit;
+    border: none;
+    text-align: center;
+    font-size: 11px;
+    height: 12px;
+    width: 12px;
+}
+
+.science-group {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    border-bottom: solid rgba(0,0,0,0.2) 4px;
+}
+.science-group:last-child {
+    border-bottom: none;
+}
+
+.scientist-widget {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 15px;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
+}
+
+.last-of-science-type {
+    clear: all;
+    margin-bottom: 40px;
+}
+
+.scientist-name {
+    font-size: 14px;
+
+}
+.scientist-advice {
+    font-size: 12px;
+}
+
+.scientist-widget .NOVICE {
+    color: #81c220;
+}
+.scientist-widget .GRADUATE {
+    color: #85d1d6;
+}
+.scientist-widget .PROFESSOR {
+    color: #e6d22b;
+}
+.scientist-type div.selector {
+    width: 150px;
+}
+.scientist-type div.selector select,
+.scientist-type div.selector option,
+.scientist-type div.selector span {
+    width: 120px;
+}
+
+#close-recruitment-chat {
+    height:30px;
+    width: 150px;
+    text-align: center;
+}
+
+div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
+    background-color: inherit;
+    background-color: #2E2E2E\9; /* IE 8 and below */
+    padding: 5px;
+
+    opacity: 1.0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+.jGrowl-notification .jGrowl-close {
+    display: none;
+}
+
+.jGrowl-notification .jGrowl-message {
+    background-color: inherit;
+}
+
+tr#calculator-separator {
+    border-top: 1px dashed #fff;
+}
+
+table.province-target-finder tr.own-province {
+    font-weight: bold;
+}
+
+#common-combinations {
+    border-top: 2px dotted #000;
+}
+#common-combinations td {
+    line-height: 1.5em;
+    padding-left: 10px;
+}
+#add_homepage {
+    display: none !important; 
+}
+#curved_image {
+    background: url(../images/app_login_combined.png) no-repeat;
+    width: 375px;
+    height: 208px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#war_history_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#war_history_show {
+    justify-content: end;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_justify_center {
+    justify-content: center;
+}
+
+.margin_row {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.margin_column {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.ranking_history_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.ranking_history_container a {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.disable-link {
+    pointer-events: none;
+    color: white;
+}
+
+.ranking_history_column {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 5px 5px;
+    justify-content: center;
+}
+
+.ranking_history_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.ranking_history_row h3 {
+    margin: 10px 10px 10px 10px;
+}
+
+.ranking_history_p {
+    margin: 1px 1px 1px 1px !important;
+}
+
+.grow_1 {
+    flex: 1 1 0;
+}
+
+.grow_2 {
+    flex: 2 1 0;
+}
+
+.grow_3 {
+    flex: 3 1 0;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-even {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.td_center_bottom {
+    vertical-align:bottom;
+    text-align:center;
+}
