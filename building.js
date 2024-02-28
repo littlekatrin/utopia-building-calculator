@@ -1,3 +1,4 @@
+// kN: This is a modified version of the original building.js file.
 let buildings = null;
 let totalLand = null;
 let shouldTriggerOnChange = false;
@@ -104,10 +105,61 @@ function updateTotalPercent() {
     $("#growth_total").html("Total " + total.toFixed(1) + "%");
 }
 
+/**
+ * Calculate the costs of the buildings
+ * @returns {number}
+ * @param knBuildingObject {Object}
+ * @private
+ */
+function _calculateCosts(buildingObject) {
+    if (!buildingObject) {
+        return 0;
+    }
+    let netCost = 0;
+    let _totalBuild = 0;
+    let _totalRaze = 0;
+
+    buildingObject.buildingList.forEach((building) => {
+        let cost = 0;
+        if (building.toBuild > 0) {
+            cost += buildingObject.buildCost * building.toBuild;
+            _totalBuild += cost;
+            console.log(`(${building.toBuild}) ${building.name} build cost: ${cost} gc`);
+        } else if (building.toBuild < 0) {
+            cost += Math.abs(buildingObject.razeCost * building.toBuild);
+            _totalRaze += cost;
+            console.log(`(${building.toBuild}) ${building.name} raze cost: ${cost} gc`);
+        }
+        netCost += cost;
+    });
+    console.log(`Total Build Cost: ${_totalBuild} gc`);
+    console.log(`Total Raze Cost: ${_totalRaze} gc`);
+    console.log(`--------------------------------------`);
+    console.log(`Net Construction Cost: ${netCost} gc`);
+    console.log('');
+    return netCost;
+}
+
 $(document).ready(function() {
     let building_json = $("#growth_buildings").val();
     buildings = JSON.parse(building_json);
     totalLand = parseInt($("#growth_total_land").val());
+
+    /** Modify the buildings object to include the cost of building and razing
+     * and to include the number of net building to be done +/- (toBuild)
+     * @author kN
+    */
+    const _buildCost = $('#build_cost_gc').text();
+    const _razeCost = $('#raze_cost_gc').text();
+    buildings.forEach((building) => {
+        building.toBuild = 0;
+    });
+    const knBuildingObject = {
+        buildCost: _buildCost,
+        razeCost: _razeCost,
+        buildingList: Array.from(buildings),
+    };
+    console.log('knBuildingObject', knBuildingObject);
 
     buildings.forEach((building) => {
         let inputId = "#input_" + building.buildingId;
@@ -133,6 +185,7 @@ $(document).ready(function() {
                 let buildingInfo = buildings.find(build => build.buildingId === parseInt(id));
                 let toBuild = $("#build_" + id).html();
                 let buildInput = $("#id_quantity_" + buildingInfo.buildingId);
+
 
                 if(type === 'build') {
                     if (toBuild > 0) {
@@ -202,19 +255,22 @@ $(document).ready(function() {
             let inputId = "#input_" + id;
 
             $(inputId).on('input', function() {
-                let buildingInfo = buildings.find(build => build.buildingId === parseInt(id));
+                let buildingInfo = buildings.find(build => build.buildingId === parseInt(id));                
                 let totalCurrent = buildingInfo.quantityScheduled + buildingInfo.quantityOwned;
                 let div = $(divId);
 
                 let percent = $(this).val();
                 let total = Math.round(totalLand * (percent / 100));
                 let toBuild = total - totalCurrent
+                // kN: Keeping this up to date
+                buildingInfo.toBuild = toBuild;
                 div.html(toBuild);
                 let color = 'grey';
                 if (toBuild > 0) { color = 'green' }
                 if (toBuild < 0) { color = 'red' }
                 div.css('background-color', color);
-                updateTotalPercent()
+                updateTotalPercent();
+                _calculateCosts(knBuildingObject);
             });
         }
     });

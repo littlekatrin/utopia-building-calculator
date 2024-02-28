@@ -540,7 +540,7 @@
                                  <th>Total Land</th>
                                  <td>655 acres</td>
                                  <th>Construction Cost</th>
-                                 <td>532gc per acre</td>
+                                 <td><span id="build_cost_gc">532</span>gc per acre</td>
                               </tr>
                               <tr>
                                  <th>Total Undeveloped land</th>
@@ -552,7 +552,7 @@
                                  <th>Construction Time</th>
                                  <td>16 days</td>
                                  <th>Raze Cost</th>
-                                 <td>332gc per acre</td>
+                                 <td><span id="raze_cost_gc">332</span>gc per acre</td>
                               </tr>
                               <tr>
                                  <th>Free Building Credits</th>
@@ -694,7 +694,7 @@
                                     <div class="selector" name="build_select_container" id="build_select_container" style="width: 310px; background-position: -472px -190px !important;">
                                        <div class="selector" id="uniform-build_select">
                                           <span>current</span>
-                                          <select name="build_select" id="build_select" style="opacity: 0;">
+                                          <select name="build_select" id="build_select">
                                              <option value="current">current</option>
                                              <option value="war">war</option>
                                              <option value="eowcf TM">eowcf TM</option>
@@ -704,7 +704,7 @@
                                     <input class="button-link" style="padding-right: 3px; padding-left: 3px;" id="growth_fill_in" type="submit" value="Fill-In" onclick="">
                                  </th>
                               </tr>
-                              <tr id="row_build_name" style="display: none">
+                              <tr id="row_build_name">
                                  <th colspan="9">
                                     <p style="text-align: center; font-size: medium;">Build Name: </p>
                                     <input type="text" size="20" id="input_build_name" value="">
