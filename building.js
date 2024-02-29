@@ -93,50 +93,49 @@ function saveCurrentBuild(name) {
     saveBuild(name, buildList)
 }
 
-function updateTotalPercent() {
+function updateTotalPercent(knBuildingObject) {
     let total = 0;
     $("#buildtool td").each(function() {
             let tdid = $(this).attr("id");
             if(tdid !== undefined) {
                 let id = tdid.replace("id_", "");
-                total += parseFloat($("#input_" + id).val());
+                total += parseFloat($("#input_" + id).val() || 0);
             }
         });
     $("#growth_total").html("Total " + total.toFixed(1) + "%");
+    if (knBuildingObject) {
+        $("#growth_total_gc").html(`Total Cost ${_updateCosts(knBuildingObject).toLocaleString()}  gc`);
+        $("#growth_total_gc").show();
+    } else {
+        $("#growth_total_gc").html(`Total Cost 0  gc`);
+        $("#growth_total_gc").hide();
+    }
 }
 
 /**
- * Calculate the costs of the buildings
+ * Update the costs of all projected buildings
  * @returns {number}
  * @param knBuildingObject {Object}
  * @private
  */
-function _calculateCosts(buildingObject) {
+function _updateCosts(buildingObject) {
     if (!buildingObject) {
         return 0;
     }
     let netCost = 0;
-    let _totalBuild = 0;
-    let _totalRaze = 0;
 
     buildingObject.buildingList.forEach((building) => {
         let cost = 0;
         if (building.toBuild > 0) {
             cost += buildingObject.buildCost * building.toBuild;
-            _totalBuild += cost;
             console.log(`(${building.toBuild}) ${building.name} build cost: ${cost} gc`);
         } else if (building.toBuild < 0) {
             cost += Math.abs(buildingObject.razeCost * building.toBuild);
-            _totalRaze += cost;
             console.log(`(${building.toBuild}) ${building.name} raze cost: ${cost} gc`);
         }
         netCost += cost;
     });
-    console.log(`Total Build Cost: ${_totalBuild} gc`);
-    console.log(`Total Raze Cost: ${_totalRaze} gc`);
-    console.log(`--------------------------------------`);
-    console.log(`Net Construction Cost: ${netCost} gc`);
-    console.log('');
+    console.log(`Total Construction Cost: ${netCost} gc`);
     return netCost;
 }
 
@@ -252,6 +251,7 @@ $(document).ready(function() {
         if(tdid !== undefined) {
             let id = tdid.replace("id_", "");
             let divId = "#build_" + id;
+            let costDivId = "#build_gc_" + id;
             let inputId = "#input_" + id;
 
             $(inputId).on('input', function() {
@@ -264,13 +264,19 @@ $(document).ready(function() {
                 let toBuild = total - totalCurrent
                 // kN: Keeping this up to date
                 buildingInfo.toBuild = toBuild;
+
                 div.html(toBuild);
                 let color = 'grey';
-                if (toBuild > 0) { color = 'green' }
-                if (toBuild < 0) { color = 'red' }
+                $(costDivId).html(0);
+                if (toBuild > 0) { 
+                    color = 'green';
+                    $(costDivId).html(toBuild * knBuildingObject.buildCost)
+                } else if (toBuild < 0) { 
+                    color = 'red';
+                    $(costDivId).html(Math.abs(toBuild * knBuildingObject.razeCost))
+                }
                 div.css('background-color', color);
-                updateTotalPercent();
-                _calculateCosts(knBuildingObject);
+                updateTotalPercent(knBuildingObject);
             });
         }
     });

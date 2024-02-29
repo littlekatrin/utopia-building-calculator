@@ -1111,3 +1111,14 @@ body.wysiwyg {
     font-size: 14px;
 }
 
+/* kN Building Calculator Styles */
+.kN-cost-cell {
+    font-size: 12px;
+    text-align: right;
+    font-style: monospace;
+    padding: 2px;
+    border: #222526 1px solid;
+    border-radius: 4px;
+    width: 40px;
+    margin: auto;
+}
